@@ -1,72 +1,219 @@
 :root{
-  --primary:#1aa3d8;
-  --dark:#0f3a54;
-  --light:#f6f6f6;
-  --text:#333;
-  --white:#fff;
+--primary:#1aa3d8;
+--dark:#0f3a54;
+--light:#f6f6f6;
 }
 
-/* RESET */
 *{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Montserrat', sans-serif;color:var(--text);line-height:1.6;}
-.container{width:1140px;max-width:90%;margin:auto;}
+
+body{
+font-family:'Montserrat',sans-serif;
+color:#333;
+line-height:1.6;
+}
+
+.container{
+width:1140px;
+max-width:90%;
+margin:auto;
+}
+
+.center{text-align:center;}
+.small{max-width:750px;}
 
 /* TOPBAR */
-.topbar{background:#f2f2f2;font-size:12px;}
-.top-inner{display:flex;justify-content:space-between;align-items:center;padding:6px 0;}
-.top-left span{margin-right:15px;}
-.top-right img{height:18px;}
+.topbar{
+background:#f2f2f2;
+font-size:12px;
+}
+.top-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:6px 0;
+}
+.fb-icon{height:18px;}
 
 /* HEADER */
-header{padding:20px 0;text-align:center;}
+header{padding:20px 0;}
 .logo{height:70px;}
 
 /* NAV */
-.main-nav{border-top:1px solid #e6e6e6;border-bottom:1px solid #e6e6e6;}
-.main-nav ul{display:flex;justify-content:center;gap:24px;list-style:none;padding:12px 0;}
-.main-nav a{text-decoration:none;font-size:13px;text-transform:uppercase;letter-spacing:1px;color:#555;font-weight:600;}
+.main-nav{
+border-top:1px solid #e6e6e6;
+border-bottom:1px solid #e6e6e6;
+}
+.main-nav ul{
+display:flex;
+justify-content:center;
+gap:25px;
+list-style:none;
+padding:12px 0;
+}
+.main-nav a{
+text-decoration:none;
+font-size:13px;
+text-transform:uppercase;
+letter-spacing:1px;
+color:#555;
+font-weight:600;
+}
 .main-nav a:hover{color:var(--primary);}
 
 /* HERO */
-.hero{height:520px;position:relative;background:url("images/hero.jpg")center/cover no-repeat;}
-.hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.55);}
-.hero-content{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;text-align:center;color:#fff;}
-.hero-content h1{font-size:46px;font-weight:800;margin-bottom:28px;text-transform:uppercase;}
-.hero-buttons{display:flex;gap:18px;}
+.hero{
+height:520px;
+background:url("images/hero.jpg") center/cover no-repeat;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+}
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.55);
+}
+.hero-content{
+position:relative;
+}
+.hero-sub{
+color:var(--primary);
+font-weight:700;
+display:block;
+margin-bottom:15px;
+}
+.hero h1{
+font-size:46px;
+font-weight:800;
+margin-bottom:30px;
+}
+.hero-buttons{
+display:flex;
+gap:18px;
+justify-content:center;
+}
 
 /* BUTTONS */
-.btn{padding:12px 32px;font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1px;text-decoration:none;display:inline-block;}
-.btn-primary{background:var(--primary);color:#fff;}
-.btn-primary:hover{background:var(--dark);}
-.btn-secondary{background:transparent;border:2px solid #fff;color:#fff;}
-.btn-secondary:hover{background:#fff;color:var(--dark);}
+.btn{
+padding:12px 32px;
+font-size:13px;
+font-weight:700;
+text-transform:uppercase;
+text-decoration:none;
+letter-spacing:1px;
+display:inline-block;
+}
+.primary{
+background:var(--primary);
+color:#fff;
+}
+.primary:hover{background:var(--dark);}
+.outline{
+border:2px solid #fff;
+color:#fff;
+}
+.outline:hover{
+background:#fff;
+color:var(--dark);
+}
 
 /* DIENSTEN */
-.diensten{background:var(--light);padding:90px 0;text-align:center;}
-.diensten h2{color:var(--primary);font-size:20px;text-transform:uppercase;margin-bottom:12px;}
-.diensten p{margin-bottom:22px;font-size:14px;}
-.diensten-list{list-style:none;margin-bottom:35px;}
-.diensten-list li{margin:5px 0;}
-.diensten-list a{text-decoration:underline;color:var(--dark);font-weight:600;font-size:14px;}
-.diensten-icons{display:flex;flex-wrap:wrap;justify-content:center;gap:52px;margin-bottom:38px;}
-.diensten-icons img{width:64px;opacity:0.85;transition:0.3s;}
-.diensten-icons img:hover{opacity:1;transform:scale(1.1);}
-.contact-btn{margin-top:12px;}
+.diensten{
+background:var(--light);
+padding:90px 0;
+}
+.diensten h2{
+color:var(--primary);
+font-size:20px;
+text-transform:uppercase;
+margin-bottom:12px;
+}
+.diensten p{
+margin-bottom:40px;
+font-size:14px;
+}
+.diensten-icons{
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+margin-bottom:40px;
+}
+.dienst{
+text-decoration:none;
+color:#333;
+font-size:13px;
+font-weight:600;
+text-align:center;
+}
+.dienst img{
+width:60px;
+margin-bottom:10px;
+transition:0.3s;
+}
+.dienst:hover img{
+transform:scale(1.1);
+}
+.contact-btn{margin-top:10px;}
 
 /* OVER MIJ */
-.over-mij{padding:100px 0;}
-.over-inner{display:flex;align-items:center;gap:60px;}
-.over-img-wrapper img{width:380px;}
-.over-text h2{color:var(--primary);font-size:22px;text-transform:uppercase;margin-bottom:14px;}
-.over-text p{font-size:15px;line-height:1.8;}
+.over-mij{
+padding:70px 0;
+background:#fff;
+}
+.over-wrapper{
+display:flex;
+align-items:center;
+gap:40px;
+}
+.wood-bar{
+width:300px;
+height:90px;
+background:url("images/hout.jpg") center/cover no-repeat;
+}
+.over-content h3{
+color:var(--primary);
+text-transform:uppercase;
+margin-bottom:10px;
+}
+.over-content p{
+max-width:500px;
+font-size:14px;
+line-height:1.8;
+}
 
 /* CTA */
-.cta{position:relative;background:url("images/hero.jpg")center/cover no-repeat;padding:85px 0;text-align:center;color:#fff;}
-.cta-overlay{position:absolute;inset:0;background:rgba(15,59,83,0.9);}
-.cta h2{position:relative;font-size:20px;margin-bottom:28px;}
-.cta .btn{position:relative;}
+.cta{
+background:url("images/hero.jpg") center/cover no-repeat;
+padding:90px 0;
+position:relative;
+text-align:center;
+color:#fff;
+}
+.cta-overlay{
+position:absolute;
+inset:0;
+background:rgba(15,59,84,0.9);
+}
+.cta-inner{
+position:relative;
+}
+.cta h2{
+font-size:20px;
+margin-bottom:30px;
+}
 
 /* FOOTER */
-footer{background:#1c1c1c;color:#aaa;text-align:center;padding:28px 0;}
-.footer-logo{height:58px;margin-bottom:12px;}
-footer p{font-size:12px;}
+footer{
+background:#1c1c1c;
+color:#aaa;
+text-align:center;
+padding:30px 0;
+}
+.footer-logo{
+height:60px;
+margin-bottom:10px;
+}
