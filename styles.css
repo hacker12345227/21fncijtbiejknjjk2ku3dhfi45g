@@ -1,11 +1,14 @@
-/* ===============================
-   JWE MONTAGE STYLESHEET
-   Kleuren gebaseerd op voorbeeld:
-   Blauw: #1ea4d9
-   Donkerblauw: #0d3c55
-   Lichtgrijs: #f2f2f2
-   Donkergrijs tekst: #333333
-================================= */
+/* =====================================
+   JWE MONTAGE – Pixel Accurate Styling
+===================================== */
+
+:root {
+    --primary: #19a3d1;
+    --dark-blue: #0f3b54;
+    --text-dark: #2e2e2e;
+    --light-gray: #f5f5f5;
+    --white: #ffffff;
+}
 
 /* RESET */
 * {
@@ -15,73 +18,80 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text-dark);
     line-height: 1.6;
-    color: #333333;
-    background-color: #ffffff;
+    background: #ffffff;
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 1150px;
+    max-width: 92%;
+    margin: auto;
 }
 
-/* ===============================
+/* =====================================
    HEADER
-================================= */
+===================================== */
 
 header {
-    background-color: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
+    background: #fff;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 18px 0;
 }
 
 .logo {
-    height: 60px;
+    height: 65px;
 }
 
 nav ul {
-    list-style: none;
     display: flex;
-    gap: 30px;
+    list-style: none;
+    gap: 28px;
 }
 
 nav a {
     text-decoration: none;
-    color: #333333;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #444;
     font-weight: 600;
-    transition: 0.3s;
+    transition: 0.25s ease;
 }
 
 nav a:hover {
-    color: #1ea4d9;
+    color: var(--primary);
 }
 
 .contact-info {
     text-align: right;
-    font-size: 0.9rem;
+    font-size: 12px;
+}
+
+.contact-info p {
+    font-weight: 600;
 }
 
 .contact-info a {
-    color: #1ea4d9;
+    color: var(--primary);
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
 }
 
-/* ===============================
+/* =====================================
    HERO
-================================= */
+===================================== */
 
 .hero {
     position: relative;
-    height: 500px;
+    height: 520px;
     overflow: hidden;
 }
 
@@ -89,7 +99,7 @@ nav a:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: brightness(60%);
+    filter: brightness(55%);
 }
 
 .hero-text {
@@ -98,75 +108,78 @@ nav a:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #ffffff;
-    width: 90%;
+    color: white;
+    width: 100%;
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 25px;
+    font-size: 40px;
     font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+/* =====================================
+   BUTTONS
+===================================== */
+
+.btn {
+    display: inline-block;
+    padding: 13px 32px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--dark-blue);
+}
+
+.btn-secondary {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: white;
+    color: var(--dark-blue);
 }
 
 .hero-buttons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 18px;
 }
 
-/* ===============================
-   BUTTONS
-================================= */
-
-.btn {
-    padding: 12px 28px;
-    text-decoration: none;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 0.9rem;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    display: inline-block;
-}
-
-.btn-primary {
-    background-color: #1ea4d9;
-    color: #ffffff;
-}
-
-.btn-primary:hover {
-    background-color: #0d3c55;
-}
-
-.btn-secondary {
-    background-color: transparent;
-    border: 2px solid #ffffff;
-    color: #ffffff;
-}
-
-.btn-secondary:hover {
-    background-color: #ffffff;
-    color: #0d3c55;
-}
-
-/* ===============================
+/* =====================================
    DIENSTEN
-================================= */
+===================================== */
 
 .diensten {
-    background-color: #f2f2f2;
+    background: var(--light-gray);
+    padding: 85px 20px;
     text-align: center;
-    padding: 70px 20px;
 }
 
 .diensten h2 {
-    color: #1ea4d9;
+    color: var(--primary);
+    font-size: 22px;
+    text-transform: uppercase;
     margin-bottom: 15px;
-    font-size: 1.8rem;
 }
 
 .diensten p {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
+    font-size: 14px;
 }
 
 .diensten-list {
@@ -175,31 +188,32 @@ nav a:hover {
 }
 
 .diensten-list li {
-    margin: 8px 0;
+    margin: 7px 0;
 }
 
 .diensten-list a {
-    color: #0d3c55;
+    color: var(--dark-blue);
     text-decoration: none;
     font-weight: 600;
+    font-size: 14px;
 }
 
 .diensten-list a:hover {
-    color: #1ea4d9;
+    color: var(--primary);
 }
 
 .diensten-icons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 40px;
     margin-bottom: 40px;
 }
 
 .diensten-icons img {
-    width: 70px;
-    opacity: 0.8;
-    transition: 0.3s;
+    width: 65px;
+    opacity: 0.85;
+    transition: 0.3s ease;
 }
 
 .diensten-icons img:hover {
@@ -207,110 +221,93 @@ nav a:hover {
     transform: scale(1.05);
 }
 
-/* ===============================
+/* =====================================
    OVER MIJ
-================================= */
+===================================== */
 
 .over-mij {
-    padding: 70px 20px;
-    background-color: #ffffff;
+    padding: 90px 20px;
 }
 
 .over-mij h2 {
+    color: var(--primary);
     text-align: center;
-    color: #1ea4d9;
-    margin-bottom: 40px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
 }
 
 .over-mij-content {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
     max-width: 1100px;
-    margin: 0 auto;
+    margin: auto;
 }
 
 .over-mij-img {
-    width: 350px;
-    max-width: 100%;
-    border-radius: 6px;
+    width: 420px;
 }
 
 .over-mij p {
-    flex: 1;
-    min-width: 280px;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
-/* ===============================
-   CONTACT
-================================= */
+/* =====================================
+   DONKERE CTA BALK (Contact)
+===================================== */
 
 .contact {
-    background-color: #0d3c55;
-    color: #ffffff;
+    background: linear-gradient(rgba(15,59,84,0.9), rgba(15,59,84,0.9)),
+                url("images/hero.jpg") center/cover no-repeat;
+    padding: 80px 20px;
     text-align: center;
-    padding: 70px 20px;
+    color: white;
 }
 
 .contact h2 {
+    text-transform: uppercase;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
-.contact .btn-primary {
-    background-color: #1ea4d9;
-}
-
-.contact .btn-primary:hover {
-    background-color: #ffffff;
-    color: #0d3c55;
-}
-
 .social {
-    margin-top: 30px;
+    margin-top: 35px;
 }
 
 .social img {
-    width: 45px;
+    width: 40px;
 }
 
-/* ===============================
+/* =====================================
    FOOTER
-================================= */
+===================================== */
 
 footer {
-    background-color: #1a1a1a;
-    color: #cccccc;
+    background: #1d1d1d;
+    color: #aaa;
     text-align: center;
-    padding: 30px 20px;
+    padding: 35px 20px;
 }
 
 .footer-container img {
-    height: 50px;
+    height: 55px;
     margin-bottom: 15px;
 }
 
 footer p {
-    font-size: 0.9rem;
+    font-size: 13px;
 }
 
-/* ===============================
+/* =====================================
    RESPONSIVE
-================================= */
+===================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 992px) {
 
     .header-container {
         flex-direction: column;
         gap: 15px;
-    }
-
-    nav ul {
-        gap: 15px;
-    }
-
-    .hero-text h1 {
-        font-size: 1.8rem;
     }
 
     .over-mij-content {
@@ -318,7 +315,15 @@ footer p {
         text-align: center;
     }
 
-    .contact-info {
-        text-align: center;
+    .over-mij-img {
+        width: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero {
+        height: 420px;
     }
 }
