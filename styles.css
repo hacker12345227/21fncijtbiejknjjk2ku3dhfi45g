@@ -1,311 +1,228 @@
-/* =====================================
-   JWE MONTAGE – Exact Replica Styling
-===================================== */
-
 :root{
-    --primary:#1aa3d8;
-    --dark:#0e3a53;
-    --text:#3a3a3a;
-    --light:#f3f3f3;
+--primary:#1aa3d8;
+--dark:#0f3b54;
+--light:#f4f4f4;
+--text:#3a3a3a;
 }
 
-/* RESET */
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family: "Segoe UI", Arial, sans-serif;
-    color:var(--text);
-    line-height:1.7;
+font-family:'Montserrat',sans-serif;
+color:var(--text);
+line-height:1.7;
 }
 
 .container{
-    width:1140px;
-    max-width:92%;
-    margin:auto;
+width:1140px;
+max-width:92%;
+margin:auto;
 }
 
-/* ================= HEADER ================= */
+.container.small{
+max-width:750px;
+text-align:center;
+}
 
+/* TOPBAR */
+.topbar{
+background:#f2f2f2;
+font-size:12px;
+padding:8px 0;
+}
+
+.topbar-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+/* HEADER */
 header{
-    background:#fff;
-    border-bottom:1px solid #e9e9e9;
+padding:20px 0;
+text-align:center;
 }
 
-.header-container{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:20px 0;
+.logo{height:70px;}
+
+/* NAV */
+.main-nav{
+border-top:1px solid #eee;
+border-bottom:1px solid #eee;
 }
 
-.logo{
-    height:70px;
+.main-nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+gap:30px;
+padding:15px 0;
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
+.main-nav a{
+text-decoration:none;
+font-size:12px;
+font-weight:600;
+letter-spacing:1px;
+text-transform:uppercase;
+color:#555;
 }
 
-nav a{
-    text-decoration:none;
-    font-size:12px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    font-weight:700;
-    color:#555;
-}
+.main-nav a:hover{color:var(--primary);}
 
-nav a:hover{
-    color:var(--primary);
-}
-
-.contact-info{
-    font-size:12px;
-    text-align:right;
-}
-
-.contact-info p{
-    font-weight:700;
-}
-
-.contact-info a{
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:700;
-}
-
-/* ================= HERO ================= */
-
+/* HERO */
 .hero{
-    position:relative;
-    height:560px;
+position:relative;
+height:560px;
+background:url("images/hero.jpg") center/cover no-repeat;
 }
 
-.hero-bg{
-    position:absolute;
-    inset:0;
-    background:url("images/hero.jpg") center/cover no-repeat;
-    filter:brightness(55%);
+.hero-overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,0.55);
 }
 
 .hero-content{
-    position:relative;
-    height:100%;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:#fff;
+position:relative;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:#fff;
 }
 
-.hero-subtitle{
-    color:var(--primary);
-    font-weight:700;
-    letter-spacing:1px;
-    margin-bottom:15px;
+.hero-sub{
+color:var(--primary);
+font-weight:700;
+margin-bottom:15px;
 }
 
 .hero h1{
-    font-size:46px;
-    font-weight:800;
-    text-transform:uppercase;
-    line-height:1.2;
-    margin-bottom:35px;
+font-size:48px;
+font-weight:800;
+margin-bottom:35px;
+line-height:1.2;
 }
 
-/* ================= BUTTONS ================= */
+.hero-buttons{display:flex;gap:20px;}
 
+/* BUTTONS */
 .btn{
-    padding:14px 36px;
-    text-transform:uppercase;
-    font-size:13px;
-    font-weight:700;
-    letter-spacing:1px;
-    text-decoration:none;
-    display:inline-block;
+padding:14px 36px;
+text-transform:uppercase;
+font-size:13px;
+font-weight:700;
+letter-spacing:1px;
+text-decoration:none;
+display:inline-block;
 }
 
-.btn-primary{
-    background:var(--primary);
-    color:#fff;
+.primary{
+background:var(--primary);
+color:#fff;
 }
 
-.btn-primary:hover{
-    background:var(--dark);
+.primary:hover{background:var(--dark);}
+
+.outline{
+border:2px solid #fff;
+color:#fff;
 }
 
-.btn-outline{
-    border:2px solid #fff;
-    color:#fff;
+.outline:hover{
+background:#fff;
+color:var(--dark);
 }
 
-.btn-outline:hover{
-    background:#fff;
-    color:var(--dark);
-}
-
-.hero-buttons{
-    display:flex;
-    gap:20px;
-}
-
-/* ================= DIENSTEN ================= */
-
+/* DIENSTEN */
 .diensten{
-    background:var(--light);
-    padding:100px 0;
-    text-align:center;
+background:var(--light);
+padding:100px 0;
 }
 
 .diensten h2{
-    color:var(--primary);
-    font-size:22px;
-    text-transform:uppercase;
-    margin-bottom:15px;
-}
-
-.diensten p{
-    margin-bottom:30px;
-    font-size:14px;
+color:var(--primary);
+font-size:22px;
+text-transform:uppercase;
+margin-bottom:15px;
 }
 
 .diensten-list{
-    list-style:none;
-    margin-bottom:45px;
+list-style:none;
+margin:25px 0 50px;
 }
 
-.diensten-list li{
-    margin:6px 0;
-}
+.diensten-list li{margin:6px 0;}
 
 .diensten-list a{
-    color:var(--dark);
-    font-weight:600;
-    font-size:14px;
-    text-decoration:underline;
+color:var(--dark);
+font-weight:600;
+text-decoration:underline;
 }
 
 .diensten-icons{
-    display:flex;
-    justify-content:center;
-    gap:55px;
-    flex-wrap:wrap;
-    margin-bottom:50px;
+display:flex;
+justify-content:center;
+gap:60px;
+flex-wrap:wrap;
+margin-bottom:50px;
 }
 
-.diensten-icons img{
-    width:70px;
+.diensten-icons img{width:70px;}
+
+/* OVER */
+.over{
+padding:110px 0;
 }
 
-/* ================= OVER MIJ ================= */
-
-.over-mij{
-    padding:110px 0;
+.over-inner{
+display:flex;
+align-items:center;
+gap:70px;
 }
 
-.over-mij h2{
-    text-align:center;
-    color:var(--primary);
-    text-transform:uppercase;
-    margin-bottom:60px;
+.over-img{width:450px;}
+
+.over-text h3{
+color:var(--primary);
+text-transform:uppercase;
+margin-bottom:20px;
 }
 
-.over-mij-content{
-    display:flex;
-    align-items:center;
-    gap:70px;
+/* CTA */
+.cta{
+position:relative;
+background:url("images/hero.jpg") center/cover no-repeat;
+padding:90px 0;
+text-align:center;
+color:#fff;
 }
 
-.over-mij-img{
-    width:450px;
+.cta-overlay{
+position:absolute;
+inset:0;
+background:rgba(15,59,84,0.92);
 }
 
-.over-mij p{
-    font-size:14px;
-    line-height:1.9;
+.cta .container{position:relative;}
+
+.cta h2{
+font-size:20px;
+margin-bottom:30px;
 }
 
-/* ================= DONKERE CTA BALK ================= */
-
-.contact{
-    background:url("images/hero.jpg") center/cover no-repeat;
-    position:relative;
-    padding:90px 0;
-    text-align:center;
-    color:#fff;
-}
-
-.contact::before{
-    content:"";
-    position:absolute;
-    inset:0;
-    background:rgba(14,58,83,0.92);
-}
-
-.contact h2{
-    position:relative;
-    font-size:20px;
-    text-transform:uppercase;
-    margin-bottom:30px;
-}
-
-.contact .btn{
-    position:relative;
-}
-
-.social{
-    position:relative;
-    margin-top:40px;
-}
-
-.social img{
-    width:45px;
-}
-
-/* ================= FOOTER ================= */
-
+/* FOOTER */
 footer{
-    background:#1c1c1c;
-    color:#aaa;
-    text-align:center;
-    padding:40px 0;
+background:#1c1c1c;
+color:#aaa;
+text-align:center;
+padding:40px 0;
 }
 
-.footer-container img{
-    height:60px;
-    margin-bottom:15px;
-}
-
-footer p{
-    font-size:13px;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media(max-width:992px){
-
-    .header-container{
-        flex-direction:column;
-        gap:15px;
-    }
-
-    .over-mij-content{
-        flex-direction:column;
-        text-align:center;
-    }
-
-    .over-mij-img{
-        width:300px;
-    }
-
-    .hero h1{
-        font-size:30px;
-    }
+.footer-inner img{
+height:60px;
+margin-bottom:15px;
 }
