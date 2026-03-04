@@ -1,137 +1,133 @@
-/* 1_normalize.css */
-/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
-html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
-body { margin: 0; }
+/* =============================
+   Normalize & Reset
+============================= */
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+body { margin: 0; line-height: 1.75; font-family: 'Open Sans', sans-serif; font-size: 16px; color: #4a4a4a; background: #fff; }
 article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary { display: block; }
 audio, canvas, progress, video { display: inline-block; vertical-align: baseline; }
 audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
-a { background: transparent; }
-a:active, a:hover { outline: 0; }
-abbr[title] { border-bottom: 1px dotted; }
+a { background: transparent; text-decoration: none; color: #22afe4; }
+a:hover { color: #000; }
 b, strong { font-weight: bold; }
 dfn { font-style: italic; }
 h1 { font-size: 2em; margin: 0.67em 0; }
-mark { background: #ff0; color: #000; }
-small { font-size: 80%; }
-sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
-sup { top: -0.5em; } sub { bottom: -0.25em; }
-img { border: 0; } svg:not(:root) { overflow: hidden; }
-figure { margin: 1em 40px; } hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0; }
-pre { overflow: auto; } code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em; }
-button, input, optgroup, select, textarea { color: inherit; font: inherit; margin: 0; }
-button { overflow: visible; }
-button, select { text-transform: none; }
-button, html input[type="button"], input[type="reset"], input[type="submit"] { -webkit-appearance: button; cursor: pointer; }
-button[disabled], html input[disabled] { cursor: default; }
-button::-moz-focus-inner, input::-moz-focus-inner { border: 0; padding: 0; }
-input { line-height: normal; }
-input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0; }
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button { height: auto; }
-input[type="search"] { -webkit-appearance: textfield; -moz-box-sizing: content-box; -webkit-box-sizing: content-box; box-sizing: content-box; }
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration { -webkit-appearance: none; }
-fieldset { border: 1px solid #c0c0c0; margin: 0 2px; padding: 0.35em 0.625em 0.75em; }
-legend { border: 0; padding: 0; }
-textarea { overflow: auto; }
-optgroup { font-weight: bold; }
+h2 { font-size: 24px; margin-bottom: 5px; color: #4a4a4a; }
+h3 { font-size: 20px; color: #26abe2; text-transform: uppercase; }
+h4 { font-size: 16px; }
+p { margin-bottom: 10px; }
+img { border: 0; max-width: 100%; height: auto; }
 table { border-collapse: collapse; border-spacing: 0; }
 td, th { padding: 0; }
+input, textarea, select, button { font: inherit; color: inherit; margin: 0; padding: 3px; }
 
-/* 3_flexnav.css */
-.flexnav{ -webkit-transition:none; -moz-transition:none; -ms-transition:none; transition:none; -webkit-transform-style:preserve-3d; overflow:hidden; margin:0 auto; width:100%; max-height:0; position: relative; z-index: 999}
-.flexnav.opacity{ opacity:0}
-.flexnav.flexnav-show{ max-height:2000px; opacity:1; -webkit-transition:all .5s ease-in-out; -moz-transition:all .5s ease-in-out; -ms-transition:all .5s ease-in-out; transition:all .5s ease-in-out}
-.flexnav li{ position:relative; overflow:hidden; border-bottom:1px solid rgba(0,0,0,0.15); }
-.flexnav li a{ position:relative; display:block; z-index:2; overflow:hidden}
-.flexnav li ul{ width:100%; }
-.flexnav li ul li{ position:relative; overflow:hidden}
-.flexnav li ul.flexnav-show li{ overflow:visible; z-index:999;}
-.flexnav li ul li a{ display:block}
-.flexnav .touch-button{ position:absolute; z-index:999; top:0; right:0; width:50px; display:inline-block; background:rgba(0,0,0,0.125); text-align:center}
-.flexnav .touch-button:hover{ cursor:pointer}
-.menu-button{ position:relative; display:block; border-bottom:1px solid rgba(0,0,0,0.15); border-top:1px solid rgba(0,0,0,0.15); cursor: pointer; text-align:center; line-height: 50px;}
-.menu-button .touch-button{ background:rgba(0,0,0,0.125); position:absolute; z-index:999; top:0; right:0; width:50px; height:50px; display:inline-block;}
-.menu-button .touch-button .navicon{ position:relative;font-style: normal;}
-.menu-button i, .flexnav i {font-style:normal !important}
-@media all and (min-width:990px) { 
-	.flexnav{ overflow:visible}
-	.flexnav.opacity{ opacity:1}
-	.flexnav li{ position:relative; list-style:none; float:left; display:block; overflow:visible; border-bottom:none}
-	.flexnav li >ul{ position:absolute; top:auto; left:0; width:auto}
-	.flexnav li >ul li{ width:100%}
-	.flexnav li ul li >ul{ margin-left:100%; top:0}
-	.flexnav li ul li a{ border-bottom:none}
-	.flexnav li ul.open{ display:block; opacity:1; visibility:visible; z-index:1}
-	.flexnav li ul.open li{ overflow:visible; max-height:100px}
-	.flexnav li ul.open ul.open{ margin-left:100%; top:0}
-	.menu-button{ display:none}
+/* =============================
+   Flexnav (Menu)
+============================= */
+.flexnav {
+    overflow: hidden; margin: 0 auto; width: 100%; max-height: 0; position: relative; z-index: 999;
+    -webkit-transition:none; -moz-transition:none; -ms-transition:none; transition:none; -webkit-transform-style:preserve-3d;
+}
+.flexnav.flexnav-show { max-height: 2000px; opacity: 1; transition: all .5s ease-in-out; }
+.flexnav li { position: relative; overflow: hidden; border-bottom: 1px solid rgba(0,0,0,0.15); }
+.flexnav li a { display: block; }
+.flexnav li ul { display: none; width: 100%; }
+.flexnav li:hover ul { display: block; }
+.menu-button { display: block; text-align: center; line-height: 50px; border-top:1px solid rgba(0,0,0,0.15); border-bottom:1px solid rgba(0,0,0,0.15); cursor: pointer; position: relative; }
+.menu-button .touch-button { position: absolute; right: 0; top: 0; width: 50px; height: 50px; background: rgba(0,0,0,0.125); }
+@media all and (min-width: 990px) {
+    .flexnav { overflow: visible; max-height: none; }
+    .flexnav li { float: left; border-bottom: none; }
+    .flexnav li ul { position: absolute; top: auto; left: 0; width: auto; }
+    .menu-button { display: none; }
 }
 
-/* 4_flexslider.css */
-/* FlexSlider Necessary Styles */
-.flexslider {margin: 0; padding: 0; line-height: 1;}
-.flexslider .slides > li {display: none; -webkit-backface-visibility: hidden;}
-.flexslider .slides img {width: 100%; display: block;}
-.flex-pauseplay span {text-transform: capitalize;}
-.slides:after {content: "\0020"; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;}
-html[xmlns] .slides {display: block;}
-* html .slides {height: 1%;}
+/* =============================
+   Flexslider
+============================= */
 .flexslider { margin: 0 0 20px; background: #fff; position: relative; zoom: 1; }
-.flex-viewport { max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; -o-transition: all 1s ease; transition: all 1s ease; }
-.loading .flex-viewport { max-height: 300px; }
-.carousel li { margin-right: 5px; }
-.flex-direction-nav a { text-decoration:none; display: block; width: 40px; height: 40px; margin: -20px 0 0; position: absolute; top: 50%; z-index: 10; overflow: hidden; opacity: 0; cursor: pointer; color: rgba(0,0,0,0.6); text-shadow: 1px 1px 0 rgba(255,255,255,0.4); -webkit-transition: all .3s ease; -moz-transition: all .3s ease; transition: all .3s ease; }
+.flexslider .slides > li { display: none; }
+.flexslider .slides img { width: 100%; display: block; }
+.flex-direction-nav a { display: block; width: 40px; height: 40px; position: absolute; top: 50%; margin-top: -20px; opacity: 0; color: rgba(0,0,0,0.6); text-shadow: 1px 1px 0 rgba(255,255,255,0.4); }
 .flex-direction-nav .flex-prev { left: -50px; }
-.flex-direction-nav .flex-next { right: -50px; text-align: right; }
+.flex-direction-nav .flex-next { right: -50px; }
 .flexslider:hover .flex-prev { opacity: 0.7; left: 10px; }
 .flexslider:hover .flex-next { opacity: 0.7; right: 10px; }
-.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover { opacity: 1; }
-.flex-direction-nav .flex-disabled { opacity: 0!important; filter:alpha(opacity=0); cursor: default; }
-.flex-direction-nav a:before  { font-family: "flexslider-icon"; font-size: 40px; display: inline-block; content: '\f001'; }
-.flex-direction-nav a.flex-next:before  { content: '\f002'; }
-.flex-pauseplay a { display: block; width: 20px; height: 20px; position: absolute; bottom: 5px; left: 10px; opacity: 0.8; z-index: 10; overflow: hidden; cursor: pointer; color: #000; }
-.flex-pauseplay a:before  { font-family: "flexslider-icon"; font-size: 20px; display: inline-block; content: '\f004'; }
-.flex-pauseplay a:hover  { opacity: 1; }
-.flex-pauseplay a.flex-play:before { content: '\f003'; }
-.flex-control-nav {width: 100%; position: absolute; bottom: 20px; text-align: center; z-index:10;}
-.flex-control-nav li {margin: 0 6px; display: inline-block; zoom: 1; *display: inline;}
-.flex-control-paging li a {width: 11px; height: 11px; display: block; background: #666; background: rgba(0,0,0,0.3); cursor: pointer; text-indent: -9999px; border-radius: 20px; box-shadow: inset 0 0 3px rgba(0,0,0,0.3);}
-.flex-control-paging li a:hover { background: #333; background: rgba(0,0,0,0.75); }
-.flex-control-paging li a.flex-active { background: #000; background: rgba(0,0,0,0.6); cursor: default; }
-.flex-control-thumbs {margin: 5px 0 0; position: static; overflow: hidden;}
-.flex-control-thumbs li {width: 25%; float: left; margin: 0;}
-.flex-control-thumbs img {width: 100%; display: block; opacity: .7; cursor: pointer;}
-.flex-control-thumbs img:hover {opacity: 1;}
-.flex-control-thumbs .flex-active {opacity: 1; cursor: default;}
-@media screen and (max-width: 860px) {
-  .flex-direction-nav .flex-prev { opacity: 1; left: 10px;}
-  .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
-}
 
-/* 8_custom.css */
-* { box-sizing: border-box; }
-body { line-height: 175%; font-family: 'Open Sans', sans-serif; color: #4a4a4a; font-size: 16px; background: #fff}
-.clear { clear: both; height: 0; }
-.button , .column a, .button.inverted:hover {display: inline-block; padding: 0 20px; min-width: 200px; height:50px; line-height: 50px; text-transform: uppercase; font-size: 16px; text-align: center; text-decoration: none; cursor: pointer; color: #fff; background: #22afe4; }
-.button:hover, .column a:hover, #teaserCntr .sliderCaption a:hover, .button.inverted {background: #fff; color: #4b4746}
-/* … verder met al je custom styling, navigatie, headers, footers, #teaser, columns, contactbar, diensten, socialmedia, responsive rules… */
+/* =============================
+   Header & Navigation
+============================= */
+header { padding-top: 10px; }
+header .logo { float: left; }
+header .adres { float: right; font-size: 12px; line-height: 32px; }
+header .headerbuttons { float: right; margin-top: 40px; }
+header .headerbuttons a { display: inline-block; margin-left: 15px; color: #22afe4; }
+nav { height: 100px; text-transform: uppercase; font-weight: 600; position: relative; z-index: 2; }
+nav ul a { color: #4a4a4a; }
+nav ul li a:hover, nav ul li:hover a, nav ul li.active a { color: #22afe4; }
 
-/* 9_responsive.css */
-@media screen and (max-width: 990px) { 
-  .hidemobile {display: none;}
-  .container {width: 98%; padding-left: 1%; padding-right: 1%}
-  img {max-width: 100% !important; height: auto !important}
-  footer .footerMenu, footer .footerMenu.last {width: 100%; text-align: center; padding: 0px; margin-right: 0; margin: 0px auto; }
-  .columnCntr { height: auto; padding: 20px 0; clear: both; background: rgba(0,0,0,.10)}
-  .column.last {float:none; margin-right: auto}
-  article td { clear:both; vertical-align: top; padding-right: 1px;}
-  article table{ width:100%!important; font-size:75%; display: table-cell;} 
-  input, select{width:95%; } textarea{width:95%;}
-  input[type="checkbox"]{border:none; width:15px}
-  form { background: none; width: 100%; border-radius: 5px; padding: 10px 0px; clear: both;}
-  form p {clear: both;}
-  #teaser .blok {float: none; width: 100%}
-  #nieuws li {float: none; width: 100%; margin: 0 0 30px 0}
-  nav {height: auto}
+/* =============================
+   Teaser / Hero
+============================= */
+#teaser { width: 100%; height: 600px; overflow: hidden; background: url('/images/hero.jpg') no-repeat center center; background-size: cover; }
+#teaser .container { padding-top: 150px; text-align: center; text-transform: uppercase; line-height: 200%; }
+#teaser .title { font-weight: 800; color: #46c5f0; font-size: 26px; margin-bottom: 15px; }
+#teaser .large { font-weight: 800; color: #fff; font-size: 52px; margin-bottom: 45px; line-height: 100%; }
+
+/* =============================
+   Columns & Blocks
+============================= */
+#blokken { padding: 45px 0; }
+.column { float: left; width: 50%; padding: 2%; height: 450px; }
+.column.first { background: url('/images/fotoovermij.jpg') no-repeat center center; background-size: cover; }
+
+/* =============================
+   Buttons
+============================= */
+.button, .column a, .button.inverted:hover { display: inline-block; padding: 0 20px; min-width: 200px; height: 50px; line-height: 50px; text-transform: uppercase; text-align: center; text-decoration: none; cursor: pointer; color: #fff; background: #22afe4; }
+.button:hover, .column a:hover, .button.inverted { background: #fff; color: #4b4746; }
+
+/* =============================
+   Articles / News / Fotoalbum
+============================= */
+article { text-align: center; font-size: 18px; padding: 60px 0; }
+article #homecontent { float: left; width: 600px; padding: 0 10px; }
+article #nieuws { float: right; width: 280px; }
+article #nieuws li { margin: 10px 0; border-bottom: 1px solid #888; padding-bottom: 5px; }
+article #nieuws li a { text-decoration: none; font-weight: bold; }
+article ul.fotoalbum { list-style: none; margin: 0; }
+article ul.fotoalbum li { float: left; margin: 0 10px 10px 0; }
+article ul.fotoalbum li .imageholder { display: block; width: 240px; height: 160px; overflow: hidden; }
+
+/* =============================
+   Contactbar
+============================= */
+.contactbar { background: url('/images/bg-contact.jpg') no-repeat center center; background-size: cover; color: #fff; text-align: center; padding: 60px 15px; }
+.contactbar .large { text-transform: uppercase; font-size: 28px; font-weight: 600; }
+
+/* =============================
+   Footer
+============================= */
+footer { padding: 60px 0; text-align: center; }
+footer .footerMenu { width: 235px; float: left; margin-right: 10px; font-size: 11px; text-transform: uppercase; }
+footer .footerMenu.last { float: right; width: 130px; margin-right: 0; }
+footer .footerMenu li a { text-decoration: none; color: #494544; }
+
+/* =============================
+   Responsive
+============================= */
+@media screen and (max-width: 990px) {
+    .container { width: 98%; padding: 0 1%; }
+    nav { height: auto; text-align: center; }
+    header, header .logo, header .adres, header .headerbuttons { float: none; display: block; margin: 15px 0; text-align: center; }
+    .column, #nieuws li { width: auto; float: none; margin: 10px auto; }
+    #teaser { height: 250px; }
 }
-/* … rest van responsive CSS zoals in oude site … */
+@media screen and (max-width: 768px) {
+    #teaser { height: 200px; }
+    #diensten a { width: 50%; }
+}
