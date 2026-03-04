@@ -5,114 +5,105 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>JWE Montage</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- TOPBAR -->
 <div class="topbar">
-    <div class="container topbar-inner">
-        <div class="top-contact">
-            <span>06 - 28 14 16 18</span>
-            <span>INFO@JWEMONTAGE.NL</span>
-        </div>
-        <div class="top-social">
-            <img src="images/facebook-button.png" alt="">
-        </div>
-    </div>
+  <div class="container flex-between">
+      <div>06 - 28 14 16 18 | INFO@JWEMONTAGE.NL</div>
+      <img src="images/facebook-button.png" class="fb-icon">
+  </div>
 </div>
 
 <!-- HEADER -->
 <header>
-    <div class="container header-inner">
-        <img src="images/JWE-Montage-Logo.png" class="logo" alt="">
-    </div>
+  <div class="container center">
+      <img src="images/JWE-Montage-Logo.png" class="logo">
+  </div>
 </header>
 
 <!-- NAV -->
-<nav class="main-nav">
-    <div class="container">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#diensten">Timmerwerk</a></li>
-            <li><a href="#diensten">Verbouw</a></li>
-            <li><a href="#diensten">Renovatie</a></li>
-            <li><a href="#diensten">Elektrotechniek</a></li>
-            <li><a href="#diensten">Installatietechniek</a></li>
-            <li><a href="#diensten">Onderhoud</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
+<nav>
+  <div class="container">
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#diensten">Timmerwerk</a></li>
+          <li><a href="#diensten">Verbouw</a></li>
+          <li><a href="#diensten">Renovatie</a></li>
+          <li><a href="#diensten">Elektrotechniek</a></li>
+          <li><a href="#diensten">Installatietechniek</a></li>
+          <li><a href="#diensten">Onderhoud</a></li>
+          <li><a href="#contact">Contact</a></li>
+      </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-    <div class="hero-overlay"></div>
-    <div class="hero-content container">
-        <span class="hero-sub">JWE MONTAGE</span>
-        <h1>ALLROUND BOUW &<br>INSTALLATIEBEDRIJF</h1>
-        <div class="hero-buttons">
-            <a href="#diensten" class="btn primary">Diensten</a>
-            <a href="#over-mij" class="btn outline">Over mij</a>
-        </div>
-    </div>
+  <div class="hero-content">
+      <span class="subtitle">JWE MONTAGE</span>
+      <h1>ALLROUND BOUW &<br>INSTALLATIEBEDRIJF</h1>
+      <div class="buttons">
+          <a href="#diensten" class="btn primary">Diensten</a>
+          <a href="#over" class="btn outline">Over mij</a>
+      </div>
+  </div>
 </section>
 
 <!-- DIENSTEN -->
 <section id="diensten" class="diensten">
-    <div class="container small">
-        <h2>JWE Montage voor al je verbouwingswerkzaamheden</h2>
-        <p>JWE is een allround bouw- en installatiebedrijf dat de volgende diensten aanbiedt:</p>
+  <div class="container small center">
+      <h2>JWE Montage voor al je verbouwingswerkzaamheden</h2>
+      <p>JWE is een allround bouw- en installatiebedrijf dat de volgende diensten aanbiedt:</p>
 
-        <ul class="diensten-list">
-            <li><a href="#">Installatietechniek</a></li>
-            <li><a href="#">Elektrotechniek</a></li>
-            <li><a href="#">Verbouw</a></li>
-            <li><a href="#">Renovatie</a></li>
-            <li><a href="#">Onderhoud</a></li>
-        </ul>
+      <ul class="diensten-list">
+          <li><a href="#">Installatietechniek</a></li>
+          <li><a href="#">Elektrotechniek</a></li>
+          <li><a href="#">Verbouw</a></li>
+          <li><a href="#">Renovatie</a></li>
+          <li><a href="#">Onderhoud</a></li>
+      </ul>
 
-        <div class="diensten-icons">
-            <img src="images/icon-timmerwerk.png">
-            <img src="images/icon-elektrotechniek.png">
-            <img src="images/icon-installatie.png">
-            <img src="images/icon-badkamer.png">
-            <img src="images/icon-verbouw.png">
-        </div>
+      <div class="icon-row">
+          <img src="images/icon-timmerwerk.png">
+          <img src="images/icon-elektrotechniek.png">
+          <img src="images/icon-installatie.png">
+          <img src="images/icon-badkamer.png">
+          <img src="images/icon-verbouw.png">
+      </div>
 
-        <a href="#contact" class="btn primary">Contact opnemen</a>
-    </div>
+      <a href="#contact" class="btn primary">Contact opnemen</a>
+  </div>
 </section>
 
 <!-- OVER MIJ -->
-<section id="over-mij" class="over">
-    <div class="container over-inner">
-        <img src="images/bg-contact.jpg" class="over-img">
-        <div class="over-text">
-            <h3>Over mij</h3>
-            <p>Met mijn bedrijf JWE Montage heb ik ruim 18 jaar ervaring als timmerman en ben tevens gediplomeerd installateur...</p>
-        </div>
-    </div>
+<section id="over" class="over">
+  <div class="container over-grid">
+      <img src="images/bg-contact.jpg" class="over-img">
+      <div>
+          <h3>Over mij</h3>
+          <p>Met mijn bedrijf JWE Montage heb ik ruim 18 jaar ervaring als timmerman en ben tevens gediplomeerd installateur...</p>
+      </div>
+  </div>
 </section>
 
 <!-- CTA -->
 <section id="contact" class="cta">
-    <div class="cta-overlay"></div>
-    <div class="container">
-        <h2>EEN OPDRACHT VOOR JWE MONTAGE? NEEM CONTACT MET MIJ OP</h2>
-        <a href="mailto:INFO@JWEMONTAGE.NL" class="btn primary">Contact opnemen</a>
-    </div>
+  <div class="cta-inner">
+      <h2>EEN OPDRACHT VOOR JWE MONTAGE? NEEM CONTACT MET MIJ OP</h2>
+      <a href="mailto:INFO@JWEMONTAGE.NL" class="btn primary">Contact opnemen</a>
+  </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-    <div class="container footer-inner">
-        <img src="images/JWE-Montage-Logo.png">
-        <p>© 2026 JWE Montage</p>
-    </div>
+  <div class="container center">
+      <img src="images/JWE-Montage-Logo.png" class="footer-logo">
+      <p>© 2026 JWE Montage</p>
+  </div>
 </footer>
 
 </body>
