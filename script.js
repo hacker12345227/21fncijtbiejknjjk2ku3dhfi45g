@@ -1,21 +1,17 @@
-// Zorg dat alles pas werkt na laden van de DOM
+// script.js
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ===========================
-    // 1. Formulier interactie
-    // ===========================
+    // ===== 1. Formulieren =====
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', function(e){
-            e.preventDefault(); // voorkomt echte submit
+            e.preventDefault();
             alert('Bedankt voor je bericht! We nemen snel contact op.');
-            form.reset(); // leeg de velden
+            form.reset();
         });
     });
 
-    // ===========================
-    // 2. Sticky header bij scroll
-    // ===========================
+    // ===== 2. Sticky header =====
     const header = document.querySelector('header');
     if(header){
         const stickyOffset = header.offsetTop;
@@ -28,12 +24,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ===========================
-    // 3. Lightbox voor impressie/pagina
-    // ===========================
+    // ===== 3. Smooth scroll voor anchor links =====
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function(e){
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if(target){
+                target.scrollIntoView({behavior: 'smooth'});
+            }
+        });
+    });
+
+    // ===== 4. Lightbox voor impressie-pagina =====
     const lightboxImages = document.querySelectorAll('.projecten-grid img');
     if(lightboxImages.length > 0){
-        // maak lightbox container
         const lightbox = document.createElement('div');
         lightbox.id = 'lightbox';
         document.body.appendChild(lightbox);
@@ -71,19 +76,5 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-
-    // ===========================
-    // 4. Eventueel smooth scroll voor anchor links
-    // ===========================
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e){
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if(target){
-                target.scrollIntoView({behavior: 'smooth'});
-            }
-        });
-    });
 
 });
