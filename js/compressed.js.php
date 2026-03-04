@@ -1,60 +1,136 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // ===== Formulieren =====
-    const forms = document.querySelectorAll('form');
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e){
-            e.preventDefault();
-            alert('Bedankt voor je bericht! We nemen snel contact op.');
-            form.reset();
-        });
+// path: /js/default.js
+// ==============================
+// Unified Default JS
+// - FlexSlider (v2.4.0)
+// - FlexNav responsive menu
+// - Klikbare items
+// - Input focus/blur
+// - Diensten hover effect
+// ==============================
+
+$(document).ready(function () {
+
+    // ----- Klikbare rijen -----
+    $(".clickable").click(function (e) {
+        e.preventDefault();
+        const link = $(this).find('a').attr('href');
+        if (link) window.location = link;
     });
 
-    // ===== Sticky header =====
-    const header = document.querySelector('header');
-    if(header){
-        const stickyOffset = header.offsetTop;
-        window.addEventListener('scroll', () => {
-            if(window.pageYOffset > stickyOffset){
-                header.classList.add('sticky');
-            } else {
-                header.classList.remove('sticky');
-            }
-        });
-    }
-
-    // ===== Smooth scroll =====
-    const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    anchorLinks.forEach(link => {
-        link.addEventListener('click', function(e){
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if(target){
-                target.scrollIntoView({behavior: 'smooth'});
-            }
-        });
+    // ----- Input focus/blur -----
+    $('input[type="text"]').on('focus', function () {
+        $(this).addClass("focused");
+        if (this.value === this.defaultValue) this.value = '';
+        if (this.value !== this.defaultValue) this.select();
+    }).on('blur', function () {
+        $(this).removeClass("focused");
+        if ($.trim(this.value) === '') this.value = this.defaultValue || '';
     });
 
-    // ===== Lightbox impressie =====
-    const lightboxImages = document.querySelectorAll('.projecten-grid img');
-    if(lightboxImages.length > 0){
-        const lightbox = document.createElement('div');
-        lightbox.id = 'lightbox';
-        document.body.appendChild(lightbox);
-        const img = document.createElement('img');
-        lightbox.appendChild(img);
+    // ----- Flexslider init -----
+    $('.flexslider').flexslider({
+        animation: "fade",
+        slideshowSpeed: 7000,
+        animationSpeed: 600,
+        controlNav: true,
+        directionNav: true,
+        smoothHeight: true,
+        pauseOnHover: true
+    });
 
-        lightbox.addEventListener('click', () => {
-            lightbox.style.opacity = 0;
-            setTimeout(() => lightbox.style.visibility = 'hidden', 300);
-        });
+    // ----- FlexNav init -----
+    const $nav = $('nav ul').first();
+    $nav.attr({
+        "class": "flexnav",
+        "data-breakpoint": "990"
+    });
+    $(".flexnav").flexNav({
+        animationSpeed: 250,
+        transitionOpacity: true,
+        buttonSelector: ".menu-button",
+        hover: true
+    });
 
-        lightboxImages.forEach(image => {
-            image.style.cursor = 'pointer';
-            image.addEventListener('click', () => {
-                img.src = image.src;
-                lightbox.style.visibility = 'visible';
-                setTimeout(() => lightbox.style.opacity = 1, 10);
-            });
-        });
-    }
+    // ----- Diensten hover effect -----
+    $("#diensten a").hover(
+        function () {
+            const $img = $(this).find('img');
+            $img.attr('src', $img.attr('src').replace(".png", "-over.png"));
+        },
+        function () {
+            const $img = $(this).find('img');
+            $img.attr('src', $img.attr('src').replace("-over.png", ".png"));
+        }
+    );
+
 });
+
+// ==============================
+// FlexNav (simplified, readable version)
+// ==============================
+(function ($) {
+    $.fn.flexNav = function (options) {
+        const settings = $.extend({
+            animationSpeed: 250,
+            transitionOpacity: true,
+            buttonSelector: ".menu-button",
+            hover: true,
+            calcItemWidths: false,
+            hoverIntent: false,
+            hoverIntentTimeout: 150
+        }, options);
+
+        const $nav = $(this);
+        $nav.addClass("with-js");
+        if (settings.transitionOpacity) $nav.addClass("opacity");
+
+        // mark items with submenus
+        $nav.find("li").each(function () {
+            if ($(this).has("ul").length) {
+                $(this).addClass("item-with-ul").find("ul").hide();
+            }
+        });
+
+        const $items = $nav.find(">li");
+        const itemCount = $items.length;
+        const percentageWidth = 100 / itemCount + "%";
+
+        function resizeMenu() {
+            const breakpoint = $nav.data("breakpoint") || 990;
+            if ($(window).width() <= breakpoint) {
+                $nav.removeClass("lg-screen").addClass("sm-screen");
+                if (settings.calcItemWidths) $items.css("width", "100%");
+            } else {
+                $nav.removeClass("sm-screen").addClass("lg-screen");
+                if (settings.calcItemWidths) $items.css("width", percentageWidth);
+            }
+        }
+
+        // toggle submenu
+        function toggleSubmenu($item) {
+            const $submenu = $item.find(">ul");
+            if ($submenu.hasClass("flexnav-show")) {
+                $submenu.removeClass("flexnav-show").slideUp(settings.animationSpeed);
+            } else {
+                $submenu.addClass("flexnav-show").slideDown(settings.animationSpeed);
+            }
+        }
+
+        // add touch buttons
+        $(".item-with-ul, " + settings.buttonSelector).append('<span class="touch-button"><i class="navicon">&#9660;</i></span>');
+
+        $(".touch-button").click(function (e) {
+            e.preventDefault();
+            toggleSubmenu($(this).parent());
+        });
+
+        $(window).on("resize", resizeMenu);
+        resizeMenu();
+    };
+}(jQuery));
+
+// ==============================
+// FlexSlider (simplified init wrapper, real plugin stays external)
+// ==============================
+// Include original jquery.flexslider.min.js in your HTML
+// <script src="/js/jquery.flexslider.min.js"></script>
