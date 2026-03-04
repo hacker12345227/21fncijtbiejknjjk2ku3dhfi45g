@@ -1,329 +1,311 @@
 /* =====================================
-   JWE MONTAGE – Pixel Accurate Styling
+   JWE MONTAGE – Exact Replica Styling
 ===================================== */
 
-:root {
-    --primary: #19a3d1;
-    --dark-blue: #0f3b54;
-    --text-dark: #2e2e2e;
-    --light-gray: #f5f5f5;
-    --white: #ffffff;
+:root{
+    --primary:#1aa3d8;
+    --dark:#0e3a53;
+    --text:#3a3a3a;
+    --light:#f3f3f3;
 }
 
 /* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-body {
+body{
     font-family: "Segoe UI", Arial, sans-serif;
-    color: var(--text-dark);
-    line-height: 1.6;
-    background: #ffffff;
+    color:var(--text);
+    line-height:1.7;
 }
 
-.container {
-    width: 1150px;
-    max-width: 92%;
-    margin: auto;
+.container{
+    width:1140px;
+    max-width:92%;
+    margin:auto;
 }
 
-/* =====================================
-   HEADER
-===================================== */
+/* ================= HEADER ================= */
 
-header {
-    background: #fff;
-    border-bottom: 1px solid #e6e6e6;
+header{
+    background:#fff;
+    border-bottom:1px solid #e9e9e9;
 }
 
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 18px 0;
+.header-container{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:20px 0;
 }
 
-.logo {
-    height: 65px;
+.logo{
+    height:70px;
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 28px;
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
 }
 
-nav a {
-    text-decoration: none;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #444;
-    font-weight: 600;
-    transition: 0.25s ease;
+nav a{
+    text-decoration:none;
+    font-size:12px;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    font-weight:700;
+    color:#555;
 }
 
-nav a:hover {
-    color: var(--primary);
+nav a:hover{
+    color:var(--primary);
 }
 
-.contact-info {
-    text-align: right;
-    font-size: 12px;
+.contact-info{
+    font-size:12px;
+    text-align:right;
 }
 
-.contact-info p {
-    font-weight: 600;
+.contact-info p{
+    font-weight:700;
 }
 
-.contact-info a {
-    color: var(--primary);
-    text-decoration: none;
-    font-weight: 600;
+.contact-info a{
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:700;
 }
 
-/* =====================================
-   HERO
-===================================== */
+/* ================= HERO ================= */
 
-.hero {
-    position: relative;
-    height: 520px;
-    overflow: hidden;
+.hero{
+    position:relative;
+    height:560px;
 }
 
-.hero img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(55%);
+.hero-bg{
+    position:absolute;
+    inset:0;
+    background:url("images/hero.jpg") center/cover no-repeat;
+    filter:brightness(55%);
 }
 
-.hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    width: 100%;
+.hero-content{
+    position:relative;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    color:#fff;
 }
 
-.hero-text h1 {
-    font-size: 40px;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
+.hero-subtitle{
+    color:var(--primary);
+    font-weight:700;
+    letter-spacing:1px;
+    margin-bottom:15px;
 }
 
-/* =====================================
-   BUTTONS
-===================================== */
-
-.btn {
-    display: inline-block;
-    padding: 13px 32px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 700;
-    transition: 0.3s ease;
+.hero h1{
+    font-size:46px;
+    font-weight:800;
+    text-transform:uppercase;
+    line-height:1.2;
+    margin-bottom:35px;
 }
 
-.btn-primary {
-    background: var(--primary);
-    color: white;
+/* ================= BUTTONS ================= */
+
+.btn{
+    padding:14px 36px;
+    text-transform:uppercase;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-decoration:none;
+    display:inline-block;
 }
 
-.btn-primary:hover {
-    background: var(--dark-blue);
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
 }
 
-.btn-secondary {
-    border: 2px solid white;
-    color: white;
+.btn-primary:hover{
+    background:var(--dark);
 }
 
-.btn-secondary:hover {
-    background: white;
-    color: var(--dark-blue);
+.btn-outline{
+    border:2px solid #fff;
+    color:#fff;
 }
 
-.hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
+.btn-outline:hover{
+    background:#fff;
+    color:var(--dark);
 }
 
-/* =====================================
-   DIENSTEN
-===================================== */
-
-.diensten {
-    background: var(--light-gray);
-    padding: 85px 20px;
-    text-align: center;
+.hero-buttons{
+    display:flex;
+    gap:20px;
 }
 
-.diensten h2 {
-    color: var(--primary);
-    font-size: 22px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+/* ================= DIENSTEN ================= */
+
+.diensten{
+    background:var(--light);
+    padding:100px 0;
+    text-align:center;
 }
 
-.diensten p {
-    margin-bottom: 25px;
-    font-size: 14px;
+.diensten h2{
+    color:var(--primary);
+    font-size:22px;
+    text-transform:uppercase;
+    margin-bottom:15px;
 }
 
-.diensten-list {
-    list-style: none;
-    margin-bottom: 40px;
+.diensten p{
+    margin-bottom:30px;
+    font-size:14px;
 }
 
-.diensten-list li {
-    margin: 7px 0;
+.diensten-list{
+    list-style:none;
+    margin-bottom:45px;
 }
 
-.diensten-list a {
-    color: var(--dark-blue);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 14px;
+.diensten-list li{
+    margin:6px 0;
 }
 
-.diensten-list a:hover {
-    color: var(--primary);
+.diensten-list a{
+    color:var(--dark);
+    font-weight:600;
+    font-size:14px;
+    text-decoration:underline;
 }
 
-.diensten-icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 40px;
+.diensten-icons{
+    display:flex;
+    justify-content:center;
+    gap:55px;
+    flex-wrap:wrap;
+    margin-bottom:50px;
 }
 
-.diensten-icons img {
-    width: 65px;
-    opacity: 0.85;
-    transition: 0.3s ease;
+.diensten-icons img{
+    width:70px;
 }
 
-.diensten-icons img:hover {
-    opacity: 1;
-    transform: scale(1.05);
+/* ================= OVER MIJ ================= */
+
+.over-mij{
+    padding:110px 0;
 }
 
-/* =====================================
-   OVER MIJ
-===================================== */
-
-.over-mij {
-    padding: 90px 20px;
+.over-mij h2{
+    text-align:center;
+    color:var(--primary);
+    text-transform:uppercase;
+    margin-bottom:60px;
 }
 
-.over-mij h2 {
-    color: var(--primary);
-    text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 50px;
+.over-mij-content{
+    display:flex;
+    align-items:center;
+    gap:70px;
 }
 
-.over-mij-content {
-    display: flex;
-    align-items: center;
-    gap: 60px;
-    max-width: 1100px;
-    margin: auto;
+.over-mij-img{
+    width:450px;
 }
 
-.over-mij-img {
-    width: 420px;
+.over-mij p{
+    font-size:14px;
+    line-height:1.9;
 }
 
-.over-mij p {
-    font-size: 14px;
-    line-height: 1.8;
+/* ================= DONKERE CTA BALK ================= */
+
+.contact{
+    background:url("images/hero.jpg") center/cover no-repeat;
+    position:relative;
+    padding:90px 0;
+    text-align:center;
+    color:#fff;
 }
 
-/* =====================================
-   DONKERE CTA BALK (Contact)
-===================================== */
-
-.contact {
-    background: linear-gradient(rgba(15,59,84,0.9), rgba(15,59,84,0.9)),
-                url("images/hero.jpg") center/cover no-repeat;
-    padding: 80px 20px;
-    text-align: center;
-    color: white;
+.contact::before{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:rgba(14,58,83,0.92);
 }
 
-.contact h2 {
-    text-transform: uppercase;
-    font-size: 20px;
-    margin-bottom: 30px;
+.contact h2{
+    position:relative;
+    font-size:20px;
+    text-transform:uppercase;
+    margin-bottom:30px;
 }
 
-.social {
-    margin-top: 35px;
+.contact .btn{
+    position:relative;
 }
 
-.social img {
-    width: 40px;
+.social{
+    position:relative;
+    margin-top:40px;
 }
 
-/* =====================================
-   FOOTER
-===================================== */
-
-footer {
-    background: #1d1d1d;
-    color: #aaa;
-    text-align: center;
-    padding: 35px 20px;
+.social img{
+    width:45px;
 }
 
-.footer-container img {
-    height: 55px;
-    margin-bottom: 15px;
+/* ================= FOOTER ================= */
+
+footer{
+    background:#1c1c1c;
+    color:#aaa;
+    text-align:center;
+    padding:40px 0;
 }
 
-footer p {
-    font-size: 13px;
+.footer-container img{
+    height:60px;
+    margin-bottom:15px;
 }
 
-/* =====================================
-   RESPONSIVE
-===================================== */
+footer p{
+    font-size:13px;
+}
 
-@media (max-width: 992px) {
+/* ================= RESPONSIVE ================= */
 
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
+@media(max-width:992px){
+
+    .header-container{
+        flex-direction:column;
+        gap:15px;
     }
 
-    .over-mij-content {
-        flex-direction: column;
-        text-align: center;
+    .over-mij-content{
+        flex-direction:column;
+        text-align:center;
     }
 
-    .over-mij-img {
-        width: 300px;
+    .over-mij-img{
+        width:300px;
     }
 
-    .hero-text h1 {
-        font-size: 28px;
-    }
-
-    .hero {
-        height: 420px;
+    .hero h1{
+        font-size:30px;
     }
 }
