@@ -1,189 +1,91 @@
 <!DOCTYPE html>
 <html lang="nl">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Allround bouw & installatiebedrijf | JWE Montage</title>
-    <meta name="description" content="JWE is een allround bouw- en installatiebedrijf met diensten als timmerwerk, installatiewerk, elektrotechniek en verbouwingen, renovatie en onderhoud van woningen.">
-    <meta name="keywords" content="">
-    <meta name="author" content="webwe">
-    <meta name="robots" content="index, follow">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,800" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="/css/compressed.css.php" type="text/css" />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon">
-
-    <!-- RSS & Canonical -->
-    <link rel="alternate" title="Nieuws RSS feed" type="application/rss+xml" href="/nieuws.rss">
-    <link rel="canonical" href="https://www.jwemontage.nl/">
-
-    <!-- Open Graph -->
-    <meta property="og:locale" content="nl_NL"/>
-    <meta property="og:title" content="Allround bouw & installatiebedrijf"/>
-    <meta property="og:description" content="JWE is een allround bouw- en installatiebedrijf met diensten als timmerwerk, installatietechniek, verbouwingen, renovatie en onderhoud van woningen."/>
-    <meta property="og:url" content="https://www.jwemontage.nl/"/>
-    <meta property="og:site_name" content="JWE Montage"/>
-    <meta property="og:type" content="article"/>
-    <meta property="og:image" content="https://www.jwemontage.nl/images/logo.png"/>
-
-    <!-- HTML5 Shiv voor oude IE -->
-    <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <![endif]-->
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128379480-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'UA-128379480-1');
-    </script>
-
-    <!-- reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js?hl=nl"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWE Montage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container header-container">
+            <img src="images/JWE-Montage-Logo.png" alt="JWE Montage Logo" class="logo">
+            <nav>
+                <ul>
+                    <li><a href="#diensten">Diensten</a></li>
+                    <li><a href="#over-mij">Over mij</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <p>06 - 28 14 16 18</p>
+                <a href="mailto:INFO@JWEMONTAGE.NL">INFO@JWEMONTAGE.NL</a>
+            </div>
+        </div>
+    </header>
 
-<header class="container">
-    <a href="/" class="logo"><img src="/images/JWE-Montage-Logo.png" alt="JWE Montage" /></a>
-    <p class="headerbuttons">
-        <a href="https://www.facebook.com/jwemontage/" target="_blank" class="imgfb">
-            <img src="/images/icon-facebook.png" alt="Facebook">
-        </a>
-        <a href="tel:0628141618">06 - 28 14 16 18</a>
-        <a href="mailto:info@jwemontage.nl" class="button">info@jwemontage.nl</a>
-    </p>
-    <nav>
-        <div class="menu-button">Menu</div>
-        <ul>
-            <li><a href="/" title="Home">Home</a></li>
-            <li><a href="/timmerwerk" title="Timmerwerk">Timmerwerk</a></li>
-            <li><a href="/verbouw" title="Verbouw">Verbouw</a></li>
-            <li><a href="/renovatie" title="Renovatie">Renovatie</a></li>
-            <li><a href="/elektrotechniek" title="Elektrotechniek">Elektrotechniek</a></li>
-            <li><a href="/installatietechniek" title="Installatietechniek">Installatietechniek</a></li>
-            <li><a href="/onderhoud" title="Onderhoud">Onderhoud</a></li>
-            <li><a href="/impressie" title="Impressie">Impressie</a></li>
-            <li><a href="/contact" title="Contact">Contact</a></li>
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="images/hero.jpg" alt="Hero Background">
+        <div class="hero-text">
+            <h1>ALLROUND BOUW & INSTALLATIEBEDRIJF</h1>
+            <div class="hero-buttons">
+                <a href="#diensten" class="btn btn-primary">Diensten</a>
+                <a href="#over-mij" class="btn btn-secondary">Over mij</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diensten Section -->
+    <section id="diensten" class="diensten">
+        <h2>JWE Montage voor al je verbouwingswerkzaamheden</h2>
+        <p>JWE is een allround bouw- en installatiebedrijf dat de volgende diensten aanbiedt:</p>
+        <ul class="diensten-list">
+            <li><a href="#">Timmerwerk</a></li>
+            <li><a href="#">Elektrotechniek</a></li>
+            <li><a href="#">Installatietechniek</a></li>
+            <li><a href="#">Badkamer techniek</a></li>
+            <li><a href="#">Verbouw</a></li>
+            <li><a href="#">Renovatie</a></li>
+            <li><a href="#">Onderhoud</a></li>
         </ul>
-    </nav>
-</header>
+        <div class="diensten-icons">
+            <img src="images/icon-timmerwerk.png" alt="Timmerwerk">
+            <img src="images/icon-elektrotechniek.png" alt="Elektrotechniek">
+            <img src="images/icon-installatie.png" alt="Installatie">
+            <img src="images/icon-badkamer.png" alt="Badkamer">
+            <img src="images/icon-verbouw.png" alt="Verbouw">
+            <img src="images/icon-renovatie.png" alt="Renovatie">
+            <img src="images/icon-onderhoud.png" alt="Onderhoud">
+        </div>
+        <a href="#contact" class="btn btn-primary">Contact opnemen</a>
+    </section>
 
-<section id="teaser">
-    <div class="container">
-        <p class="title">JWE Montage</p>
-        <p class="large">allround bouw &<br> installatiebedrijf</p>
-        <p>
-            <a href="/diensten" class="button">Diensten</a>
-            <a href="/over-mij" class="button inverted">Over mij</a>
-        </p>
-    </div>
-</section>
+    <!-- Over mij Section -->
+    <section id="over-mij" class="over-mij">
+        <h2>Over mij</h2>
+        <div class="over-mij-content">
+            <img src="images/bg-contact.jpg" alt="Over mij foto" class="over-mij-img">
+            <p>Met mijn bedrijf JWE Montage heb ik ruim 18 jaar ervaring als timmerman en ben tevens gediplomeerd installateur...</p>
+        </div>
+    </section>
 
-<article class="container home">    
-    <h1>JWE Montage voor al je verbouwingswerkzaamheden</h1>
-    <p>JWE is een allround bouw- en installatiebedrijf dat de volgende diensten aanbiedt:</p>
-    <p>
-        <a href="/timmerwerk">Timmerwerk</a><br>
-        <a href="/installatietechniek">Installatietechniek</a><br>
-        <a href="/elektrotechniek">Elektrotechniek</a><br>
-        <a href="/verbouw">Verbouw</a><br>
-        <a href="/renovatie">Renovatie</a><br>
-        <a href="/onderhoud">Onderhoud</a>
-    </p>
-    <p>Van het realiseren van een uitbouw of nieuwe badkamer, tot het plaatsen van een nieuwe schutting of tuinhuis, ik verzorg het graag voor je. Ook timmerwerk, elektra, tegel- en sanitairwerk behoort tot de mogelijkheden. Voor grotere projecten op het gebied van renovatie en verbouwingen kun je ook bij mij terecht.</p>
-    <p>Ik maak gebruik van hoogwaardige materialen en sta persoonlijk garant voor een hoog afwerkingsniveau.</p>
-    <p><a class="button" href="/contact">Contact opnemen</a></p>
-</article>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Een opdracht voor JWE Montage? Neem contact met mij op</h2>
+        <a href="mailto:INFO@JWEMONTAGE.NL" class="btn btn-primary">Contact opnemen</a>
+        <div class="social">
+            <a href="#"><img src="images/facebook-button.png" alt="Facebook"></a>
+        </div>
+    </section>
 
-<section id="diensten" class="container">
-    <a href="/timmerwerk">
-        <img src="/images/icon-timmerwerk.png" alt="Timmerwerk"><br>Timmerwerk
-    </a>
-    <a href="/elektrotechniek">
-        <img src="/images/icon-elektrotechniek.png" alt="Elektrotechniek"><br>Elektrotechniek
-    </a>
-    <a href="/installatietechniek">
-        <img src="/images/icon-installatie.png" alt="Installatietechniek"><br>Installatietechniek
-    </a>
-    <a href="/badkamer-bouw">
-        <img src="/images/icon-badkamer.png" alt="Badkamer"><br>Badkamer bouw
-    </a>
-    <a href="/verbouw">
-        <img src="/images/icon-verbouw.png" alt="Verbouw"><br>Verbouw
-    </a>
-    <a href="/renovatie">
-        <img src="/images/icon-renovatie.png" alt="Renovatie"><br>Renovatie
-    </a>
-    <a href="/onderhoud">
-        <img src="/images/icon-onderhoud.png" alt="Onderhoud"><br>Onderhoud
-    </a>
-</section>
-
-<section id="blokken" class="container">
-    <div class="column first"></div>
-    <div class="column last">
-        <h1>Over mij</h1>
-        <p>Met mijn bedrijf JWE Montage heb ik ruim 18 jaar ervaring als timmerman en ben tevens gediplomeerd installateur. Bij mij kun je terecht voor kleinschalige verbouwingen, vernieuwen van keuken of badkamer, en voor het plaatsen van tuinhuis, veranda, schutting en andere timmerwerken. Als gediplomeerd installateur kan ik ook helpen bij vernieuwen van elektra en installatiewerk, met een veilig en hoogwaardig eindresultaat.</p>
-    </div>
-    <br class="clear">
-</section>
-
-<section class="contactbar">
-    <p class="large">Een opdracht voor JWE Montage? <a href="/contact">Neem contact met mij op</a></p>
-    <p><a class="button" href="/contact">Contact opnemen</a></p>
-</section>
-
-<footer class="container">
-    <div class="first footerMenu">
-        <img src="/images/JWE-Montage-Logo-footer.png" alt="JWE Montage" />
-    </div>
-    <div class="footerMenu">
-        <ul>
-            <li><a href="/" title="Home">Home</a></li>
-            <li><a href="/timmerwerk" title="Timmerwerk">Timmerwerk</a></li>
-            <li><a href="/verbouw" title="Verbouw">Verbouw</a></li>
-            <li><a href="/renovatie" title="Renovatie">Renovatie</a></li>
-            <li><a href="/elektrotechniek" title="Elektrotechniek">Elektrotechniek</a></li>
-            <li><a href="/installatietechniek" title="Installatietechniek">Installatietechniek</a></li>
-            <li><a href="/onderhoud" title="Onderhoud">Onderhoud</a></li>
-            <li><a href="/impressie" title="Impressie">Impressie</a></li>
-            <li><a href="/contact" title="Contact">Contact</a></li>
-        </ul>
-    </div>
-    <div class="footerMenu">
-        <p>
-            JWE Montage<br>
-            Kerkenbovenveen 9<br>
-            7926 AD Kerkenveld<br>
-            <a href="tel:0628141618">06 - 28 14 16 18</a><br>
-            <a href="mailto:info@jwemontage.nl">info@jwemontage.nl</a>
-        </p>
-    </div>
-    <div class="footerMenu last">
-        <a class="button" href="/diensten">Bekijk diensten</a><br>
-        <a class="button facebook" href="https://www.facebook.com/jwemontage/" target="_blank">Volg mij</a>
-    </div>
-    <br class="clear">
-    <div id="footer">
-        <a href="/sitemap">sitemap</a> | 
-        <a href="/contact">contact</a> | 
-        <a href="https://webba.nl" target="_blank">Website door Webba</a>
-    </div>
-</footer>
-
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<script src="/js/compressed.js.php"></script>
-
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <img src="images/JWE-Montage-Logo.png" alt="JWE Montage Logo">
+            <p>&copy; 2026 JWE Montage</p>
+        </div>
+    </footer>
 </body>
 </html>
