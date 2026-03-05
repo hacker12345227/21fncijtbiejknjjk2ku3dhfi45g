@@ -4,42 +4,101 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Timmerwerk - JWE Montage</title>
-<link rel="stylesheet" href="/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<style>
+/* Extra styling voor content op deze pagina */
+.content {
+    padding: 70px 0;
+    max-width: 1140px;
+    margin: auto;
+    text-align: center;
+}
+.content h1 {
+    color: var(--primary);
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.content p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: auto;
+}
+.projecten-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+.projecten-grid img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.projecten-grid img:hover {
+    transform: scale(1.05);
+}
+</style>
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <img src="/images/logo.png" alt="JWE Montage Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/timmerwerk/">Timmerwerk</a></li>
-                <li><a href="/verbouw/">Verbouw</a></li>
-                <li><a href="/renovatie/">Renovatie</a></li>
-                <li><a href="/elektrotechniek/">Elektrotechniek</a></li>
-                <li><a href="/installatietechniek/">Installatietechniek</a></li>
-                <li><a href="/onderhoud/">Onderhoud</a></li>
-                <li><a href="/impressie/">Impressie</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<!-- HEADER -->
+<header class="main-header">
+  <div class="container header-inner">
+
+      <!-- LOGO LINKS -->
+      <div class="header-logo">
+          <img src="../images/JWE-Montage-Logo.png" alt="JWE Montage">
+      </div>
+
+      <!-- NAV -->
+      <div class="header-contact">
+          <a href="../index.html" class="header-phone">Home</a>
+          <a href="../timmerwerk/" class="header-phone">Timmerwerk</a>
+          <a href="../verbouw/" class="header-phone">Verbouw</a>
+          <a href="../renovatie/" class="header-phone">Renovatie</a>
+          <a href="../elektrotechniek/" class="header-phone">Elektrotechniek</a>
+          <a href="../installatietechniek/" class="header-phone">Installatietechniek</a>
+          <a href="../onderhoud/" class="header-phone">Onderhoud</a>
+          <a href="../impressie/" class="header-phone">Impressie</a>
+          <a href="../contact/" class="header-mail">Contact</a>
+      </div>
+
+  </div>
 </header>
 
+<!-- CONTENT -->
 <section class="content">
     <h1>Timmerwerk</h1>
     <p>Bij JWE Montage verzorgen wij professioneel timmerwerk, van kleine reparaties tot complete meubels, kozijnen, tuinhuisjes en veranda’s.</p>
+
     <div class="projecten-grid">
-        <img src="/images/project1.jpg" alt="Timmerwerk project 1">
-        <img src="/images/project2.jpg" alt="Timmerwerk project 2">
+        <img src="../images/project1.jpg" alt="Timmerwerk project 1">
+        <img src="../images/project2.jpg" alt="Timmerwerk project 2">
+        <!-- Voeg hier eventueel meer projectafbeeldingen toe -->
     </div>
 </section>
 
+<!-- CTA -->
+<section class="cta">
+    <div class="cta-overlay"></div>
+    <div class="cta-content">
+        <h2>EEN OPDRACHT VOOR JWE MONTAGE? NEEM CONTACT MET MIJ OP</h2>
+        <a href="mailto:info@jwemontage.nl" class="btn primary">Contact opnemen</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-    <p>© 2026 JWE Montage. Alle rechten voorbehouden.</p>
+  <div class="container center">
+      <img src="../images/JWE-Montage-Logo.png" class="footer-logo">
+      <p>© 2026 JWE Montage</p>
+  </div>
 </footer>
 
-<script src="/script.js"></script>
 </body>
 </html>
