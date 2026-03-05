@@ -1,9 +1,9 @@
-/* ================= VARIABLES ================= */
 :root {
     --primary: #1aa3d8;
     --dark: #0f3a54;
-    --light: #000000;
-    --text-color: #333;
+    --light: #1a1a1a; /* donkergrijs voor secties */
+    --bg-dark: #111; /* hele pagina achtergrond */
+    --text-color: #eee;
 }
 
 /* ================= RESET ================= */
@@ -17,6 +17,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: var(--text-color);
     line-height: 1.6;
+    background: var(--bg-dark);
 }
 
 .container {
@@ -31,7 +32,7 @@ body {
 
 /* ================= HEADER ================= */
 .main-header {
-    background: #eeeeee;
+    background: #1c1c1c;
     padding: 35px 0;
 }
 
@@ -53,7 +54,6 @@ body {
     gap: 25px;
 }
 
-/* FACEBOOK ICON */
 .fb-box {
     display: block;
     width: 48px;
@@ -72,7 +72,6 @@ body {
     border: none;
 }
 
-/* TELEFOON */
 .header-phone {
     color: var(--primary);
     font-size: 18px;
@@ -84,7 +83,6 @@ body {
     text-decoration: underline;
 }
 
-/* MAIL BUTTON */
 .header-mail {
     background: var(--primary);
     color: #fff;
@@ -102,9 +100,9 @@ body {
 
 /* ================= NAV ================= */
 .main-nav {
-    border-top: 1px solid #e6e6e6;
-    border-bottom: 1px solid #e6e6e6;
-    background: #fff;
+    border-top: 1px solid #333;
+    border-bottom: 1px solid #333;
+    background: #1a1a1a;
 }
 
 .main-nav ul {
@@ -120,7 +118,7 @@ body {
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #555;
+    color: #eee;
     font-weight: 600;
     transition: 0.3s;
 }
@@ -144,7 +142,7 @@ body {
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.55);
+    background: rgba(0,0,0,0.7);
 }
 
 .hero-content {
@@ -223,6 +221,7 @@ body {
 .diensten-intro {
     margin-bottom: 40px;
     font-size: 14px;
+    color: #eee;
 }
 
 .diensten-icons {
@@ -235,7 +234,7 @@ body {
 
 .dienst {
     text-decoration: none;
-    color: #333;
+    color: #eee;
     font-size: 13px;
     font-weight: 600;
     text-align: center;
@@ -258,7 +257,7 @@ body {
 /* ================= OVER MIJ ================= */
 .over-mij {
     padding: 70px 0;
-    background: #fff;
+    background: var(--light);
 }
 
 .over-grid {
@@ -283,6 +282,7 @@ body {
     font-size: 14px;
     line-height: 1.8;
     max-width: 500px;
+    color: #eee;
 }
 
 /* ================= CTA ================= */
@@ -297,7 +297,7 @@ body {
 .cta-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.0);
+    background: rgba(0,0,0,0.5);
 }
 
 .cta-content {
@@ -311,7 +311,7 @@ body {
 
 /* ================= FOOTER ================= */
 footer {
-    background: #1c1c1c;
+    background: #111;
     color: #aaa;
     text-align: center;
     padding: 30px 0;
@@ -326,6 +326,7 @@ footer {
 .timmerwerk-page {
     padding: 90px 0;
     text-align: center;
+    color: #eee;
 }
 
 .timmerwerk-block {
@@ -346,10 +347,11 @@ footer {
     margin-bottom: 20px;
 }
 
-.timmerwerk-text p {
+.timmerwerk-text p,
+.timmerwerk-text li {
     font-size: 14px;
     line-height: 1.8;
-    margin-bottom: 15px;
+    color: #eee;
 }
 
 .timmerwerk-text ul {
@@ -358,12 +360,6 @@ footer {
     text-align: left;
 }
 
-.timmerwerk-text li {
-    margin-bottom: 8px;
-    font-size: 14px;
-}
-
-/* wissel layout */
 .reverse {
     direction: rtl;
 }
