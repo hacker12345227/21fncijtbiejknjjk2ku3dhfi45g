@@ -1,277 +1,380 @@
-:root{
---primary:#1aa3d8;
---dark:#0f3a54;
---light:#f6f6f6;
+/* ================= VARIABLES ================= */
+:root {
+    --primary: #1aa3d8;
+    --dark: #0f3a54;
+    --light: #f6f6f6;
+    --text-color: #333;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:'Montserrat',sans-serif;color:#333;line-height:1.6;}
-.container{width:1140px;max-width:90%;margin:auto;}
-.center{text-align:center;}
-
-/* ================= HEADER ================= */
-
-/* ================= HEADER ================= */
-
-.main-header{
-    background:#eeeeee;
-    padding:35px 0;
+/* ================= RESET ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.header-inner{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
-
-/* LOGO */
-.header-logo img{
-    height:95px;
-    display:block;
-}
-
-/* RECHTERKANT */
-.header-contact{
-    display:flex;
-    align-items:center;
-    gap:25px;
-}
-
-/* FACEBOOK BOX */
-.fb-box{
-    width:48px;
-    height:48px;
-    border:2px solid #1aa3d8;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-}
-
-.fb-box img{
-    height:22px;
-}
-
-/* TELEFOON */
-.header-phone{
-    color:#1aa3d8;
-    font-size:18px;
-    font-weight:500;
-    text-decoration:none;
-}
-
-.header-phone:hover{
-    text-decoration:underline;
-}
-
-/* MAIL BUTTON */
-.header-mail{
-    background:#1aa3d8;
-    color:#fff;
-    padding:14px 28px;
-    font-size:14px;
-    font-weight:700;
-    text-decoration:none;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.header-mail:hover{
-    background:#0f3a54;
-}
-
-/* NAV */
-
-.main-nav{
-    border-top:1px solid #e6e6e6;
-    border-bottom:1px solid #e6e6e6;
-    background:#fff;
-}
-
-.main-nav ul{
-    display:flex;
-    justify-content:center;
-    gap:35px;
-    list-style:none;
-    padding:18px 0;
-}
-
-.main-nav a{
-    text-decoration:none;
-    font-size:14px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    color:#555;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.main-nav a:hover{
-    color:var(--primary);
-}
-
-/* HERO */
-
-.hero{
-height:520px;
-background:url("images/hero.jpg") center/cover no-repeat;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-color:#fff;
-}
-
-.hero-overlay{
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0.55);
-}
-
-.hero-content{position:relative;}
-.hero-sub{color:var(--primary);font-weight:700;display:block;margin-bottom:15px;}
-.hero h1{font-size:46px;font-weight:800;margin-bottom:30px;}
-.hero-buttons{display:flex;gap:18px;justify-content:center;}
-
-/* BUTTONS */
-
-.btn{
-padding:12px 32px;
-font-size:13px;
-font-weight:700;
-text-transform:uppercase;
-text-decoration:none;
-letter-spacing:1px;
-display:inline-block;
-}
-
-.primary{background:var(--primary);color:#fff;}
-.primary:hover{background:var(--dark);}
-.outline{border:2px solid #fff;color:#fff;}
-.outline:hover{background:#fff;color:var(--dark);}
-
-/* DIENSTEN */
-
-.diensten{
-background:var(--light);
-padding:90px 0;
-text-align:center;
-}
-
-.diensten-container{
-max-width:800px;
-margin:auto;
-}
-
-.diensten h2{
-color:var(--primary);
-font-size:20px;
-text-transform:uppercase;
-margin-bottom:12px;
-}
-
-.diensten-intro{
-margin-bottom:40px;
-font-size:14px;
-}
-
-.diensten-icons{
-display:flex;
-justify-content:center;
-gap:60px;
-flex-wrap:wrap;
-margin-bottom:40px;
-}
-
-.dienst{
-text-decoration:none;
-color:#333;
-font-size:13px;
-font-weight:600;
-text-align:center;
-width:120px;
-}
-
-.dienst img{
-width:60px;
-margin-bottom:10px;
-transition:0.3s;
-display:block;
-margin-left:auto;
-margin-right:auto;
-}
-
-.dienst:hover img{
-transform:scale(1.1);
-}
-
-/* OVER MIJ */
-
-.over-mij{
-padding:70px 0;
-background:#fff;
-}
-
-.over-grid{
-display:grid;
-grid-template-columns:300px 1fr;
-align-items:center;
-gap:50px;
-}
-
-.wood-image{
-height:300px;
-background:url("images/fotoovermij.jpg") center/cover no-repeat;
-}
-
-.over-text h3{
-color:var(--primary);
-text-transform:uppercase;
-margin-bottom:10px;
-}
-
-.over-text p{
-font-size:14px;
-line-height:1.8;
-max-width:500px;
-}
-
-/* CTA */
-
-.cta{
-background:url("images/bg-contact.jpg") center/cover no-repeat;
-padding:90px 0;
-position:relative;
-text-align:center;
-color:#fff;
-}
-
-.cta-overlay{
-position:absolute;
-inset:0;
-background:rgba(0,0,0,0);
-}
-
-.cta-content{position:relative;}
-.cta h2{font-size:20px;margin-bottom:30px;}
-
-/* FOOTER */
-
-footer{
-background:#1c1c1c;
-color:#aaa;
-text-align:center;
-padding:30px 0;
-}
-
-/* TIMMERWERK */
-.timmerwerk-tekst {
-    font-size: 18px;
-    font-weight: 600;
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-.footer-logo{
-height:60px;
-margin-bottom:10px;
+.container {
+    width: 1140px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.center {
+    text-align: center;
+}
+
+/* ================= HEADER ================= */
+.main-header {
+    background: #eeeeee;
+    padding: 35px 0;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo img {
+    height: 95px;
+    display: block;
+}
+
+/* ================= HEADER CONTACT ================= */
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+/* FACEBOOK ICON */
+.fb-box {
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border: none;
+}
+
+/* TELEFOON */
+.header-phone {
+    color: var(--primary);
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.header-phone:hover {
+    text-decoration: underline;
+}
+
+/* MAIL BUTTON */
+.header-mail {
+    background: var(--primary);
+    color: #fff;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-mail:hover {
+    background: var(--dark);
+}
+
+/* ================= NAV ================= */
+.main-nav {
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    background: #fff;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    list-style: none;
+    padding: 18px 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #555;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--primary);
+}
+
+/* ================= HERO ================= */
+.hero {
+    height: 520px;
+    background: url("images/hero.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position: relative;
+}
+
+.hero-sub {
+    color: var(--primary);
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    padding: 12px 32px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    display: inline-block;
+    text-align: center;
+}
+
+.primary {
+    background: var(--primary);
+    color: #fff;
+}
+
+.primary:hover {
+    background: var(--dark);
+}
+
+.outline {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.outline:hover {
+    background: #fff;
+    color: var(--dark);
+}
+
+/* ================= DIENSTEN ================= */
+.diensten {
+    background: var(--light);
+    padding: 90px 0;
+    text-align: center;
+}
+
+.diensten-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+.diensten h2 {
+    color: var(--primary);
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.diensten-intro {
+    margin-bottom: 40px;
+    font-size: 14px;
+}
+
+.diensten-icons {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.dienst {
+    text-decoration: none;
+    color: #333;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: center;
+    width: 120px;
+}
+
+.dienst img {
+    width: 60px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dienst:hover img {
+    transform: scale(1.1);
+}
+
+/* ================= OVER MIJ ================= */
+.over-mij {
+    padding: 70px 0;
+    background: #fff;
+}
+
+.over-grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.wood-image {
+    height: 300px;
+    background: url("images/fotoovermij.jpg") center/cover no-repeat;
+}
+
+.over-text h3 {
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.over-text p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 500px;
+}
+
+/* ================= CTA ================= */
+.cta {
+    background: url("images/bg-contact.jpg") center/cover no-repeat;
+    padding: 90px 0;
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.cta-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.0);
+}
+
+.cta-content {
+    position: relative;
+}
+
+.cta h2 {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #1c1c1c;
+    color: #aaa;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* ================= TIMMERWERK PAGINA ================= */
+.timmerwerk-page {
+    padding: 90px 0;
+    text-align: center;
+}
+
+.timmerwerk-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.timmerwerk-block img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.timmerwerk-text h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.timmerwerk-text p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.timmerwerk-text ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.timmerwerk-text li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+/* wissel layout */
+.reverse {
+    direction: rtl;
+}
+
+.reverse .timmerwerk-text {
+    direction: ltr;
+}
+
+/* mobiel responsive */
+@media (max-width: 800px) {
+    .timmerwerk-block {
+        grid-template-columns: 1fr;
+    }
 }
