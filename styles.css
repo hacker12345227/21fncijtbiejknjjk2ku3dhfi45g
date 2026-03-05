@@ -264,6 +264,13 @@ text-align:center;
 padding:30px 0;
 }
 
+/* TIMMERWERK */
+.timmerwerk-tekst {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
 .footer-logo{
 height:60px;
 margin-bottom:10px;
