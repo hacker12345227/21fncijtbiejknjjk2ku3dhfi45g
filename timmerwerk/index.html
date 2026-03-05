@@ -1,30 +1,98 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Timmerwerk - JWE Montage</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="/styles.css">
+
+<style>
+
+/* TIMMERWERK PAGINA */
+
+.timmerwerk-page{
+padding:90px 0;
+}
+
+.timmerwerk-block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+margin-bottom:80px;
+}
+
+.timmerwerk-block img{
+width:100%;
+border-radius:6px;
+}
+
+.timmerwerk-text h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.timmerwerk-text p{
+font-size:14px;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.timmerwerk-text ul{
+margin-top:15px;
+}
+
+.timmerwerk-text li{
+margin-bottom:8px;
+font-size:14px;
+}
+
+/* wissel layout */
+
+.reverse{
+direction:rtl;
+}
+
+.reverse .timmerwerk-text{
+direction:ltr;
+}
+
+/* mobiel */
+
+@media (max-width:800px){
+
+.timmerwerk-block{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
+
+<!-- HEADER -->
 
 <header class="main-header">
 <div class="container header-inner">
 
 <div class="header-logo">
 <a href="/">
-<img src="../images/JWE-Montage-Logo.png" alt="JWE Montage">
+<img src="/images/JWE-Montage-Logo.png" alt="JWE Montage">
 </a>
 </div>
 
 <div class="header-contact">
 
 <div class="fb-box">
-<a href="https://www.facebook.com/jwemontage/" target="_blank" rel="noopener">
-<img src="../images/facebook-button.png" alt="Facebook">
+<a href="https://facebook.com" target="_blank" rel="noopener">
+<img src="/images/facebook-button.png" alt="Facebook">
 </a>
 </div>
 
@@ -37,14 +105,17 @@ INFO@JWEMONTAGE.NL
 </a>
 
 </div>
+
 </div>
 </header>
+
+<!-- NAV -->
 
 <nav class="main-nav">
 <div class="container">
 <ul>
 <li><a href="/">Home</a></li>
-<li><a href="#">Timmerwerk</a></li>
+<li><a href="/timmerwerk/">Timmerwerk</a></li>
 <li><a href="#">Verbouw</a></li>
 <li><a href="#">Renovatie</a></li>
 <li><a href="#">Elektrotechniek</a></li>
@@ -55,58 +126,129 @@ INFO@JWEMONTAGE.NL
 </div>
 </nav>
 
-<section class="diensten">
-<div class="container diensten-container">
+<!-- CONTENT -->
+
+<section class="timmerwerk-page">
+
+<div class="container">
+
+<!-- BLOK 1 -->
+
+<div class="timmerwerk-block">
+
+<div class="timmerwerk-text">
 
 <h2>Timmerman gezocht regio Hoogeveen?</h2>
 
-<p class="diensten-intro">
+<p>
 Bij het verbouwen of uitbouwen van je woning komt meer timmerwerk kijken dan je misschien zou verwachten.
 Voor een duurzaam resultaat is het van groot belang dat dit door een vakman wordt uitgevoerd.
-JWE Montage heeft ruim 18 jaar ervaring en helpt je graag met al je timmerwerk.
 </p>
 
 <p>
-Niet alleen voor verbouwing van je woning levert JWE Montage hoogwaardig timmerwerk,
-maar ook voor een tuinhuis op maat of een schutting kun je uitstekend bij ons terecht.
+JWE Montage heeft ruim 18 jaar ervaring op dit gebied en helpt je graag met de verzorging van al je timmerwerk.
+</p>
+
+</div>
+
+<img src="/images/timmerwerk1.jpg" alt="Timmerwerk JWE Montage">
+
+</div>
+
+
+<!-- BLOK 2 -->
+
+<div class="timmerwerk-block reverse">
+
+<div class="timmerwerk-text">
+
+<h2>Bouw van een woning, tuinhuis of schutting</h2>
+
+<p>
+Niet alleen voor aan- of verbouwing van je woning levert JWE Montage uitsluitend hoogwaardig timmerwerk,
+maar ook voor de bouw van een tuinhuisje op maat of schutting kun je uitstekend terecht bij JWE Montage.
 </p>
 
 <p>
 Tevens kan de plaatsing van kozijnen en tuindeuren vakkundig worden gerealiseerd.
-Voor timmerwerk in en rondom je woning gebruiken wij uitsluitend hoogwaardige materialen
+Voor timmerwerk in en rondom je woning wordt uitsluitend gebruik gemaakt van hoogwaardige materialen,
 voor een uitstekend resultaat met een lange levensduur.
 </p>
 
-<h3>Een aantal mogelijkheden:</h3>
+</div>
 
-<ul style="text-align:left;max-width:600px;margin:auto;">
-<li>Nieuwe houten kozijnen of tuindeuren plaatsen</li>
-<li>Oude kozijnen of deuren vervangen bij houtrot</li>
-<li>Dakkapel of aanbouw plaatsen</li>
-<li>Verbouwen van woningen</li>
-<li>Keukens bouwen of plaatsen</li>
-<li>Kasten op maat maken</li>
-<li>Houten trappen realiseren</li>
-<li>Schuttingen plaatsen</li>
-<li>Tuinhuis of veranda op maat bouwen</li>
+<img src="/images/timmerwerk2.jpg" alt="Tuinhuis bouwen">
+
+</div>
+
+
+<!-- BLOK 3 -->
+
+<div class="timmerwerk-block">
+
+<div class="timmerwerk-text">
+
+<h2>Mogelijkheden</h2>
+
+<ul>
+<li>Het plaatsen van nieuwe houten kozijnen of tuindeuren</li>
+<li>Het vervangen van oude kozijnen bij houtrot</li>
+<li>Het plaatsen van een aanbouw of dakkapel</li>
+<li>Het verbouwen van uw woning</li>
+<li>Het bouwen van een nieuwe keuken</li>
+<li>Het inbouwen van een kast op maat</li>
+<li>Het realiseren van een houten trap</li>
+<li>Het plaatsen van een schutting</li>
+<li>Het bouwen van een tuinhuis of veranda</li>
 </ul>
 
-<p style="margin-top:30px;">
+<p>
 Dit is slechts een greep uit de mogelijkheden.
 JWE Montage neemt je bij al je timmerwerk de zorg uit handen.
 </p>
 
+<p>
+Vrijwel al het timmerwerk realiseer ik zelf,
+waar nodig in samenwerking met geselecteerde specialisten.
+</p>
+
+</div>
+
+<img src="/images/timmerwerk3.jpg" alt="Timmerproject JWE Montage">
+
+</div>
+
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<div class="cta-overlay"></div>
+
+<div class="cta-content">
+<h2>EEN OPDRACHT VOOR JWE MONTAGE? NEEM CONTACT MET MIJ OP</h2>
+
 <a href="mailto:info@jwemontage.nl" class="btn primary">
-Offerte aanvragen
+Contact opnemen
 </a>
 
 </div>
+
 </section>
+
+<!-- FOOTER -->
 
 <footer>
 <div class="container center">
-<img src="../images/JWE-Montage-Logo.png" class="footer-logo">
+
+<img src="/images/JWE-Montage-Logo.png" class="footer-logo">
+
 <p>© 2026 JWE Montage</p>
+
 </div>
 </footer>
 
