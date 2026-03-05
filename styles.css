@@ -249,7 +249,7 @@ color:#fff;
 .cta-overlay{
 position:absolute;
 inset:0;
-background:rgba(15,59,84,0.9);
+background:rgba(0,0,0,1);
 }
 
 .cta-content{position:relative;}
