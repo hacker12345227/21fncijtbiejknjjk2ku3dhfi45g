@@ -7,23 +7,45 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<style>
+/* Facebook icon aanpassing */
+.fb-box {
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-decoration: none;
+}
+
+.fb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border: none;
+}
+</style>
 </head>
 <body>
 
+<!-- HEADER -->
 <header class="main-header">
 <div class="container header-inner">
 
+<!-- LOGO -->
 <div class="header-logo">
 <a href="/">
-<img src="../images/JWE-Montage-Logo.png" alt="JWE Montage">
+<img src="images/JWE-Montage-Logo.png" alt="JWE Montage">
 </a>
 </div>
 
+<!-- CONTACT & FACEBOOK -->
 <div class="header-contact">
 
-<a href="https://www.facebook.com/" target="_blank" class="fb-box">
-    <img src="../images/icon-facebook.png" alt="Facebook">
+<div class="fb-box">
+<a href="https://facebook.com/" target="_blank" rel="noopener">
+<img src="images/icon-facebook.png" alt="Facebook">
 </a>
+</div>
 
 <a href="tel:0628141618" class="header-phone">
 06 - 28 14 16 18
@@ -37,6 +59,7 @@ INFO@JWEMONTAGE.NL
 </div>
 </header>
 
+<!-- NAV -->
 <nav class="main-nav">
 <div class="container">
 <ul>
@@ -52,6 +75,7 @@ INFO@JWEMONTAGE.NL
 </div>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
 <div class="hero-overlay"></div>
 <div class="hero-content">
@@ -66,6 +90,7 @@ INFO@JWEMONTAGE.NL
 </div>
 </section>
 
+<!-- DIENSTEN -->
 <section id="diensten" class="diensten">
 <div class="container diensten-container">
 
@@ -116,6 +141,7 @@ JWE is een allround bouw- en installatiebedrijf dat de volgende diensten aanbied
 </div>
 </section>
 
+<!-- OVER MIJ -->
 <section id="over-mij" class="over-mij">
 <div class="container over-grid">
 
@@ -132,6 +158,7 @@ en ben tevens gediplomeerd installateur.
 </div>
 </section>
 
+<!-- CTA -->
 <section id="contact" class="cta">
 <div class="cta-overlay"></div>
 <div class="cta-content">
@@ -140,6 +167,7 @@ en ben tevens gediplomeerd installateur.
 </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
 <div class="container center">
 <img src="images/JWE-Montage-Logo.png" class="footer-logo">
