@@ -4,41 +4,260 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Installatietechniek - JWE Montage</title>
-<link rel="stylesheet" href="/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<style>
+/* INSTALLATIETECHNIEK PAGINA */
+.install-page{
+padding:90px 0;
+}
+
+.install-block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+margin-bottom:80px;
+}
+
+.install-block img{
+width:100%;
+border-radius:6px;
+}
+
+.install-text h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.install-text p{
+font-size:14px;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.install-text ul{
+margin-top:15px;
+}
+
+.install-text li{
+margin-bottom:8px;
+font-size:14px;
+}
+
+/* wissel layout */
+.reverse{
+direction:rtl;
+}
+
+.reverse .install-text{
+direction:ltr;
+}
+
+/* mobiel responsive */
+@media (max-width:800px){
+.install-block{
+grid-template-columns:1fr;
+}
+}
+
+/* Facebook icon */
+.fb-box {
+display: block;
+width: 48px;
+height: 48px;
+text-decoration: none;
+border: none;
+padding: 0;
+margin: 0;
+}
+
+.fb-box img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+display: block;
+border: none;
+}
+
+/* grotere/dikkere tekst */
+.install-tekst {
+font-size: 18px;
+font-weight: 600;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+</style>
 </head>
+
 <body>
-<header>
-    <div class="container">
-        <img src="/images/logo.png" alt="JWE Montage Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/timmerwerk/">Timmerwerk</a></li>
-                <li><a href="/verbouw/">Verbouw</a></li>
-                <li><a href="/renovatie/">Renovatie</a></li>
-                <li><a href="/elektrotechniek/">Elektrotechniek</a></li>
-                <li><a href="/installatietechniek/">Installatietechniek</a></li>
-                <li><a href="/onderhoud/">Onderhoud</a></li>
-                <li><a href="/impressie/">Impressie</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+
+<!-- HEADER -->
+<header class="main-header">
+<div class="container header-inner">
+
+<div class="header-logo">
+<a href="/"><img src="/images/JWE-Montage-Logo.png" alt="JWE Montage"></a>
+</div>
+
+<div class="header-contact">
+
+<div class="fb-box">
+<a href="https://www.facebook.com/jwemontage/" target="_blank" rel="noopener">
+<img src="../images/icon-facebook.png" alt="Facebook">
+</a>
+</div>
+
+<a href="tel:0628141618" class="header-phone">06 - 28 14 16 18</a>
+<a href="mailto:info@jwemontage.nl" class="header-mail">INFO@JWEMONTAGE.NL</a>
+
+</div>
+</div>
 </header>
 
-<section class="content">
-    <h1>Installatietechniek</h1>
-    <p>Wij verzorgen complete installaties voor verwarming, sanitair en ventilatie, zowel voor woningen als bedrijven.</p>
-    <div class="projecten-grid">
-        <img src="/images/project1.jpg" alt="Installatietechniek project 1">
-        <img src="/images/project2.jpg" alt="Installatietechniek project 2">
-    </div>
+<!-- NAV -->
+<nav class="main-nav">
+<div class="container">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/timmerwerk">Timmerwerk</a></li>
+<li><a href="/verbouw">Verbouw</a></li>
+<li><a href="/renovatie">Renovatie</a></li>
+<li><a href="/elektrotechniek">Elektrotechniek</a></li>
+<li><a href="/installatietechniek">Installatietechniek</a></li>
+<li><a href="/onderhoud">Onderhoud</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- CONTENT -->
+<section class="install-page">
+<div class="container">
+
+<!-- BLOK 1 -->
+<div class="install-block">
+<div class="install-text">
+<h2>Technische installatie in je woning</h2>
+<p>
+Hebben de technische installaties in uw woning of bedrijf een te laag rendement, is er sprake van niet functionerende installaties, of wil je simpelweg nieuwe apparatuur laten installeren? Laat je apparatuur dan vakkundig installeren voor een duurzaam resultaat.
+</p>
+<p>
+Plaatsing en vervanging van je installatie is secuur werk waarvoor een ervaren installateur vereist is. JWE Montage is je als gediplomeerd installateur graag van dienst.
+</p>
+</div>
+<img src="/images/install1.jpg" alt="Technische installaties JWE Montage">
+</div>
+
+<!-- BLOK 2 -->
+<div class="install-block reverse">
+<div class="install-text">
+<h2>Regel al je installaties met JWE Montage</h2>
+<p>
+Als allround installateur biedt JWE Montage je kwaliteit en ontzorgt je gedurende alle werkzaamheden. Ook je grote projecten kunnen waar nodig in samenwerking met andere specialisten gerealiseerd worden.
+</p>
+<p>
+Onder installatietechniek kun je denken aan het vervangen of installeren van:
+</p>
+<ul>
+<li>Centrale verwarming</li>
+<li>Vloerverwarming</li>
+<li>Water</li>
+<li>Riolering</li>
+<li>Gas</li>
+<li>Mechanische ventilatie</li>
+<li>WTW</li>
+</ul>
+</div>
+<img src="/images/install2.jpg" alt="Installatiewerk JWE Montage">
+</div>
+
+<!-- BLOK 3 -->
+<div class="install-block">
+<div class="install-text">
+<h2>Creatieve oplossingen voor installatietechniek</h2>
+<p>
+Wanneer de huidige installatie niet meer betrouwbaar of zelfs vervuilend is biedt JWE Montage graag een oplossing. Ook vanwege de beschikbaarheid van energiezuinigere alternatieven, lagere exploitatiekosten of duurzaam investeren kun je een nieuwe installatie overwegen.
+</p>
+<p class="install-tekst">
+Al vanaf dag één word je van A tot Z begeleid en waar nodig geadviseerd over de mogelijkheden met betrekking tot nieuwe installaties voor je huis of bedrijf. Zo profiteer je van jarenlange ervaring en kennis bij het maken van je beslissingen.
+</p>
+<p class="install-tekst">
+Hoewel je bij het project betrokken wordt, neemt JWE Montage je al het werk uit handen.
+</p>
+</div>
+<img src="/images/install3.jpg" alt="Installatietechniek project JWE Montage">
+</div>
+
+</div>
 </section>
 
-<footer>
-    <p>© 2026 JWE Montage. Alle rechten voorbehouden.</p>
+<!-- CTA -->
+<section class="cta">
+<div class="cta-overlay"></div>
+<div class="cta-content">
+<h2>PLAN JE INSTALLATIEPROJECT MET JWE MONTAGE</h2>
+<a href="mailto:info@jwemontage.nl" class="btn primary">Contact opnemen</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LOGO -->
+<div class="footer-left">
+<a href="/">
+<img src="../images/JWE-Montage-Logo-footer.png" alt="JWE Montage">
+</a>
+</div>
+
+<!-- PAGINA'S -->
+<div class="footer-middle">
+
+<a href="/">Home</a>
+<a href="/timmerwerk/">Timmerwerk</a>
+<a href="/verbouw/">Verbouw</a>
+<a href="/renovatie/">Renovatie</a>
+<a href="/elektrotechniek/">Elektrotechniek</a>
+<a href="/installatietechniek/">Installatietechniek</a>
+<a href="/onderhoud/">Onderhoud</a>
+<a href="/impressie/">Impressie</a>
+<a href="/contact/">Contact</a>
+
+</div>
+
+<!-- CONTACT -->
+<div class="footer-right">
+
+<a href="https://www.facebook.com/jwemontage/" target="_blank" class="footer-item">
+<img src="../images/icon-facebook.png" alt="Facebook">
+<span>Facebook</span>
+</a>
+
+<a href="https://instagram.com" target="_blank" class="footer-item">
+<img src="../images/icon-instagram.png" alt="Instagram">
+<span>Instagram</span>
+</a>
+
+<a href="tel:0628141618" class="footer-item">
+<img src="../images/icon-phone.png" alt="Telefoon">
+<span>06 - 28 14 16 18</span>
+</a>
+
+<a href="mailto:info@jwemontage.nl" class="footer-item">
+<img src="../images/icon-mail.png" alt="Mail">
+<span>info@jwemontage.nl</span>
+</a>
+
+</div>
+
+</div>
+
 </footer>
 
-<script src="/script.js"></script>
 </body>
 </html>
