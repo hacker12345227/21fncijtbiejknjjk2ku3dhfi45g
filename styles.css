@@ -312,81 +312,45 @@ body {
 /* ================= FOOTER ================= */
 
 .footer{
-background:#111;
-padding:40px 0 20px 0;
-color:#aaa;
+background-color:#111;
+padding:60px 0;
 }
 
-.footer-inner{
+.footer-container{
+width:90%;
+max-width:1200px;
+margin:auto;
 display:flex;
+align-items:flex-start;
 justify-content:space-between;
-align-items:center;
-flex-wrap:wrap;
-gap:20px;
 }
 
-.footer-left{
-display:flex;
-align-items:center;
-}
-
-.footer-logo{
-height:70px;
+.footer-left img{
+width:220px;
 }
 
 .footer-right{
 display:flex;
-align-items:center;
-gap:25px;
-flex-wrap:wrap;
-}
-
-/* social icons */
-
-.footer-social img{
-width:28px;
-height:28px;
-transition:0.3s;
-}
-
-.footer-social:hover img{
-transform:scale(1.15);
-}
-
-/* contact links */
-
-.footer-contact{
-color:#ddd;
-text-decoration:none;
-font-size:14px;
-}
-
-.footer-contact:hover{
-color:var(--primary);
-}
-
-/* copyright */
-
-.footer-bottom{
-text-align:center;
-margin-top:25px;
-font-size:13px;
-color:#777;
-}
-
-/* mobile */
-
-@media (max-width:700px){
-
-.footer-inner{
 flex-direction:column;
-text-align:center;
+gap:18px;
 }
 
-.footer-right{
-justify-content:center;
+.footer-item{
+display:flex;
+align-items:center;
+text-decoration:none;
+color:white;
+font-size:18px;
 }
 
+.footer-item img{
+width:26px;
+height:26px;
+margin-right:12px;
+}
+
+.footer-item:hover{
+opacity:0.7;
 }
 
 /* ================= TIMMERWERK PAGINA ================= */
