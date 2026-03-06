@@ -265,7 +265,6 @@ body {
     transform: scale(1.1);
 }
 
-/* CTA BUTTON */
 .diensten-btn {
     margin-top: 20px;
 }
@@ -278,17 +277,23 @@ body {
 
 .over-grid {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-wrap: wrap;
+    gap: 50px;
     align-items: center;
+    justify-content: center;
 }
 
+/* Afbeelding op desktop en mobiel */
 .wood-image {
-    width: 100%;
-    height: 0;
-    padding-top: 60%; /* aspect ratio voor correcte hoogte */
+    flex: 0 0 300px; /* desktop breedte */
+    height: 300px;   /* desktop hoogte */
     background: url("images/fotoovermij.jpg") center/cover no-repeat;
     border-radius: 6px;
+}
+
+/* Tekst naast afbeelding */
+.over-text {
+    flex: 1 1 400px;
 }
 
 .over-text h3 {
@@ -301,8 +306,6 @@ body {
     font-size: 14px;
     line-height: 1.6;
     color: #eee;
-    max-width: 100%;
-    text-align: center;
 }
 
 /* ================= CTA ================= */
@@ -338,22 +341,29 @@ body {
 
 .footer-container {
     display:flex;
-    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
-    text-align:center;
-    align-items:center;
+}
+
+/* Logo */
+.footer-left {
+    flex: 0 0 200px;
 }
 
 .footer-left img {
     width: 100%;
-    max-width: 200px; /* desktop max */
-    height: auto;      /* behoud verhouding */
+    max-width: 200px;
+    height: auto;
 }
 
+/* Midden pagina links */
 .footer-middle {
-    display:flex;
-    flex-direction:column;
-    gap:10px;
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-middle a {
@@ -366,9 +376,12 @@ body {
     color:var(--primary);
 }
 
+/* Rechts contact */
 .footer-right {
-    display:flex;
-    flex-direction:column;
+    flex: 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     gap:10px;
 }
 
@@ -440,9 +453,18 @@ body {
     .hero h1 { font-size: 46px; }
     .hero-buttons { flex-direction: row; gap: 15px; }
     .diensten-icons { gap: 60px; }
-    .over-grid { flex-direction: row; gap: 50px; align-items: center; text-align: left; }
+    .over-grid { flex-direction: row; text-align: left; }
     .timmerwerk-block { flex-direction: row; gap: 60px; }
-    .footer-container { flex-direction: row; justify-content: space-between; text-align: left; align-items:flex-start; }
+}
+
+@media (max-width: 800px) {
+    .over-grid { flex-direction: column; gap: 20px; }
+    .wood-image { width: 100%; height: 200px; }
+    .over-text { width: 100%; text-align: center; }
+    .footer-container { flex-direction: column; align-items: center; text-align: center; }
+    .footer-right { align-items: center; }
+    .hero h1 { font-size: 32px; }
+    .hero-buttons { gap: 10px; }
 }
 
 @media (max-width: 600px) {
