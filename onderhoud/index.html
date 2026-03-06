@@ -4,41 +4,248 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Onderhoud - JWE Montage</title>
-<link rel="stylesheet" href="/style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+
+<style>
+/* ONDERHOUD PAGINA */
+.maintenance-page{
+padding:90px 0;
+}
+
+.maintenance-block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+margin-bottom:80px;
+}
+
+.maintenance-block img{
+width:100%;
+border-radius:6px;
+}
+
+.maintenance-text h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.maintenance-text p{
+font-size:14px;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.maintenance-text ul{
+margin-top:15px;
+}
+
+.maintenance-text li{
+margin-bottom:8px;
+font-size:14px;
+}
+
+/* wissel layout */
+.reverse{
+direction:rtl;
+}
+
+.reverse .maintenance-text{
+direction:ltr;
+}
+
+/* mobiel responsive */
+@media (max-width:800px){
+.maintenance-block{
+grid-template-columns:1fr;
+}
+}
+
+/* Facebook icon */
+.fb-box {
+display: block;
+width: 48px;
+height: 48px;
+text-decoration: none;
+border: none;
+padding: 0;
+margin: 0;
+}
+
+.fb-box img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+display: block;
+border: none;
+}
+
+/* grotere/dikkere tekst */
+.maintenance-tekst {
+font-size: 18px;
+font-weight: 600;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+</style>
 </head>
+
 <body>
-<header>
-    <div class="container">
-        <img src="/images/logo.png" alt="JWE Montage Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/timmerwerk/">Timmerwerk</a></li>
-                <li><a href="/verbouw/">Verbouw</a></li>
-                <li><a href="/renovatie/">Renovatie</a></li>
-                <li><a href="/elektrotechniek/">Elektrotechniek</a></li>
-                <li><a href="/installatietechniek/">Installatietechniek</a></li>
-                <li><a href="/onderhoud/">Onderhoud</a></li>
-                <li><a href="/impressie/">Impressie</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+
+<!-- HEADER -->
+<header class="main-header">
+<div class="container header-inner">
+
+<div class="header-logo">
+<a href="/"><img src="/images/JWE-Montage-Logo.png" alt="JWE Montage"></a>
+</div>
+
+<div class="header-contact">
+
+<div class="fb-box">
+<a href="https://www.facebook.com/jwemontage/" target="_blank" rel="noopener">
+<img src="../images/icon-facebook.png" alt="Facebook">
+</a>
+</div>
+
+<a href="tel:0628141618" class="header-phone">06 - 28 14 16 18</a>
+<a href="mailto:info@jwemontage.nl" class="header-mail">INFO@JWEMONTAGE.NL</a>
+
+</div>
+</div>
 </header>
 
-<section class="content">
-    <h1>Onderhoud</h1>
-    <p>Wij verzorgen regulier onderhoud en kleine reparaties aan uw woning of bedrijfspand zodat alles veilig en efficiënt blijft functioneren.</p>
-    <div class="projecten-grid">
-        <img src="/images/project1.jpg" alt="Onderhoud project 1">
-        <img src="/images/project2.jpg" alt="Onderhoud project 2">
-    </div>
+<!-- NAV -->
+<nav class="main-nav">
+<div class="container">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/timmerwerk">Timmerwerk</a></li>
+<li><a href="/verbouw">Verbouw</a></li>
+<li><a href="/renovatie">Renovatie</a></li>
+<li><a href="/elektrotechniek">Elektrotechniek</a></li>
+<li><a href="/installatietechniek">Installatietechniek</a></li>
+<li><a href="/onderhoud">Onderhoud</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- CONTENT -->
+<section class="maintenance-page">
+<div class="container">
+
+<!-- BLOK 1 -->
+<div class="maintenance-block">
+<div class="maintenance-text">
+<h2>Onderhoud van je woning</h2>
+<p>
+Het is van groot belang om je woning goed te onderhouden. Door achterstallig onderhoud kunnen er problemen zoals lekkages, kapotte leidingen of houtrot ontstaan. Onder het onderhoud van je huis verstaan we onder andere het schilderen van kozijnen en dakranden, het onderhouden van je cv-ketel, het reinigen van de goten en gevels en het herstellen van voegwerk.
+</p>
+<p>
+JWE Montage verricht vakkundig alle werkzaamheden met betrekking tot onderhoud.
+</p>
+</div>
+<img src="/images/onderhoud1.jpg" alt="Onderhoud woning JWE Montage">
+</div>
+
+<!-- BLOK 2 -->
+<div class="maintenance-block reverse">
+<div class="maintenance-text">
+<h2>Achterstallig onderhoud voorkomen</h2>
+<p>
+Ook in de toekomst kan achterstallig onderhoud voor problemen zorgen. Door het onderhoud van je woning uit te stellen kan de waarde van je woning dalen. Wil je jouw woning verkopen, dan is deze minder verkoopbaar wanneer er sprake is van achterstallig onderhoud: alleen al omdat er minder eenvoudig een hypotheek voor te krijgen is.
+</p>
+<p>
+Besteding van onderhoud van zaken zoals je cv-ketel en het dak uitbesteden kan flink besparen in verhouding tot een onderhoudscontract. JWE Montage levert kwaliteitswerk tegen scherpe prijzen.
+</p>
+</div>
+<img src="/images/onderhoud2.jpg" alt="Achterstallig onderhoud voorkomen">
+</div>
+
+<!-- BLOK 3 -->
+<div class="maintenance-block">
+<div class="maintenance-text">
+<h2>Je woning onderhouden en verbeteren</h2>
+<p>
+Eventueel kun je er ook voor kiezen om bepaalde afwerkingen van je woning te laten vervangen met een onderhoudsvrije variant. Zo kan JWE Montage je houten kozijnen, die eens in de paar jaar geschilderd of bijgewerkt moeten worden, vervangen met kunststof kozijnen.
+</p>
+<p class="maintenance-tekst">
+Zo ben je minstens 50 jaar lang van het onderhoud van je kozijnen af. Door isolatieglas bespaar je bovendien direct op de energierekening.
+</p>
+</div>
+<img src="/images/onderhoud3.jpg" alt="Onderhoud en verbetering JWE Montage">
+</div>
+
+</div>
 </section>
 
-<footer>
-    <p>© 2026 JWE Montage. Alle rechten voorbehouden.</p>
+<!-- CTA -->
+<section class="cta">
+<div class="cta-overlay"></div>
+<div class="cta-content">
+<h2>PLAN HET ONDERHOUD VAN JE WONING MET JWE MONTAGE</h2>
+<a href="mailto:info@jwemontage.nl" class="btn primary">Contact opnemen</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LOGO -->
+<div class="footer-left">
+<a href="/">
+<img src="../images/JWE-Montage-Logo-footer.png" alt="JWE Montage">
+</a>
+</div>
+
+<!-- PAGINA'S -->
+<div class="footer-middle">
+
+<a href="/">Home</a>
+<a href="/timmerwerk/">Timmerwerk</a>
+<a href="/verbouw/">Verbouw</a>
+<a href="/renovatie/">Renovatie</a>
+<a href="/elektrotechniek/">Elektrotechniek</a>
+<a href="/installatietechniek/">Installatietechniek</a>
+<a href="/onderhoud/">Onderhoud</a>
+<a href="/impressie/">Impressie</a>
+<a href="/contact/">Contact</a>
+
+</div>
+
+<!-- CONTACT -->
+<div class="footer-right">
+
+<a href="https://www.facebook.com/jwemontage/" target="_blank" class="footer-item">
+<img src="../images/icon-facebook.png" alt="Facebook">
+<span>Facebook</span>
+</a>
+
+<a href="https://instagram.com" target="_blank" class="footer-item">
+<img src="../images/icon-instagram.png" alt="Instagram">
+<span>Instagram</span>
+</a>
+
+<a href="tel:0628141618" class="footer-item">
+<img src="../images/icon-phone.png" alt="Telefoon">
+<span>06 - 28 14 16 18</span>
+</a>
+
+<a href="mailto:info@jwemontage.nl" class="footer-item">
+<img src="../images/icon-mail.png" alt="Mail">
+<span>info@jwemontage.nl</span>
+</a>
+
+</div>
+
+</div>
+
 </footer>
 
-<script src="/script.js"></script>
 </body>
 </html>
