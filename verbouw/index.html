@@ -3,43 +3,267 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Verbouw - JWE Montage</title>
+<title>Timmerwerk - JWE Montage</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/styles.css">
+
+<style>
+/* TIMMERWERK PAGINA */
+.timmerwerk-page{
+padding:90px 0;
+}
+
+.timmerwerk-block{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+margin-bottom:80px;
+}
+
+.timmerwerk-block img{
+width:100%;
+border-radius:6px;
+}
+
+.timmerwerk-text h2{
+color:var(--primary);
+margin-bottom:20px;
+}
+
+.timmerwerk-text p{
+font-size:14px;
+line-height:1.8;
+margin-bottom:15px;
+}
+
+.timmerwerk-text ul{
+margin-top:15px;
+}
+
+.timmerwerk-text li{
+margin-bottom:8px;
+font-size:14px;
+}
+
+/* wissel layout */
+.reverse{
+direction:rtl;
+}
+
+.reverse .timmerwerk-text{
+direction:ltr;
+}
+
+/* mobiel responsive */
+@media (max-width:800px){
+.timmerwerk-block{
+grid-template-columns:1fr;
+}
+}
+
+/* Facebook icon */
+.fb-box {
+display: block;
+width: 48px;
+height: 48px;
+text-decoration: none;
+border: none;
+padding: 0;
+margin: 0;
+}
+
+.fb-box img {
+width: 100%;
+height: 100%;
+object-fit: contain;
+display: block;
+border: none;
+}
+
+/* grotere/dikkere tekst */
+.timmerwerk-tekst {
+font-size: 18px;
+font-weight: 600;
+line-height: 1.6;
+margin-bottom: 20px;
+}
+</style>
 </head>
+
 <body>
 
-<header>
-    <div class="container">
-        <img src="/images/logo.png" alt="JWE Montage Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/timmerwerk/">Timmerwerk</a></li>
-                <li><a href="/verbouw/">Verbouw</a></li>
-                <li><a href="/renovatie/">Renovatie</a></li>
-                <li><a href="/elektrotechniek/">Elektrotechniek</a></li>
-                <li><a href="/installatietechniek/">Installatietechniek</a></li>
-                <li><a href="/onderhoud/">Onderhoud</a></li>
-                <li><a href="/impressie/">Impressie</a></li>
-                <li><a href="/contact/">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<!-- HEADER -->
+<header class="main-header">
+<div class="container header-inner">
+
+<div class="header-logo">
+<a href="/"><img src="/images/JWE-Montage-Logo.png" alt="JWE Montage"></a>
+</div>
+
+<div class="header-contact">
+
+<div class="fb-box">
+<a href="https://facebook.com/" target="_blank" rel="noopener">
+<img src=".../images/icon-facebook.png" alt="Facebook">
+</a>
+</div>
+
+<a href="tel:0628141618" class="header-phone">06 - 28 14 16 18</a>
+<a href="mailto:info@jwemontage.nl" class="header-mail">INFO@JWEMONTAGE.NL</a>
+
+</div>
+</div>
 </header>
 
-<section class="content">
-    <h1>Verbouw</h1>
-    <p>JWE Montage verzorgt alle verbouwingen, van kleine aanpassingen tot complete keukens en badkamers.</p>
-    <div class="projecten-grid">
-        <img src="/images/project1.jpg" alt="Verbouw project 1">
-        <img src="/images/project2.jpg" alt="Verbouw project 2">
-    </div>
+<!-- NAV -->
+<nav class="main-nav">
+<div class="container">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/timmerwerk">Timmerwerk</a></li>
+<li><a href="/verbouw">Verbouw</a></li>
+<li><a href="/renovatie">Renovatie</a></li>
+<li><a href="/elektrotechniek">Elektrotechniek</a></li>
+<li><a href="/installatietechniek">Installatietechniek</a></li>
+<li><a href="/onderhoud">Onderhoud</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<!-- CONTENT -->
+<section class="timmerwerk-page">
+<div class="container">
+
+<!-- BLOK 1 -->
+<div class="timmerwerk-block">
+<div class="timmerwerk-text">
+<h2>Timmerman gezocht regio Hoogeveen?</h2>
+<p>
+Bij het verbouwen of uitbouwen van je woning komt meer timmerwerk kijken dan je misschien zou verwachten.
+Voor een duurzaam resultaat is het van groot belang dat dit door een vakman wordt uitgevoerd.
+</p>
+<p>
+JWE Montage heeft ruim 18 jaar ervaring op dit gebied en helpt je graag met de verzorging van al je timmerwerk.
+</p>
+</div>
+<img src="/images/timmerwerk1.jpg" alt="Timmerwerk JWE Montage">
+</div>
+
+<!-- BLOK 2 -->
+<div class="timmerwerk-block reverse">
+<div class="timmerwerk-text">
+<h2>Bouw van een woning, tuinhuis of schutting</h2>
+<p>
+Niet alleen voor aan- of verbouwing van je woning levert JWE Montage uitsluitend hoogwaardig timmerwerk,
+maar ook voor de bouw van een tuinhuisje op maat of schutting kun je uitstekend terecht bij JWE Montage.
+</p>
+<p>
+Tevens kan de plaatsing van kozijnen en tuindeuren vakkundig worden gerealiseerd.
+Voor timmerwerk in en rondom je woning wordt uitsluitend gebruik gemaakt van hoogwaardige materialen,
+voor een uitstekend resultaat met een lange levensduur.
+</p>
+</div>
+<img src="/images/timmerwerk2.jpg" alt="Tuinhuis bouwen">
+</div>
+
+<!-- BLOK 3 -->
+<div class="timmerwerk-block">
+<div class="timmerwerk-text">
+<h2>Mogelijkheden</h2>
+<ul>
+<li>Het plaatsen van nieuwe houten kozijnen of tuindeuren</li>
+<li>Het vervangen van oude kozijnen bij houtrot</li>
+<li>Het plaatsen van een aanbouw of dakkapel</li>
+<li>Het verbouwen van uw woning</li>
+<li>Het bouwen van een nieuwe keuken</li>
+<li>Het inbouwen van een kast op maat</li>
+<li>Het realiseren van een houten trap</li>
+<li>Het plaatsen van een schutting</li>
+<li>Het bouwen van een tuinhuis of veranda</li>
+</ul>
+
+<p class="timmerwerk-tekst">
+Dit is slechts een greep uit de mogelijkheden. JWE Montage neemt je bij al je timmerwerk de zorg uit handen.
+</p>
+
+<p class="timmerwerk-tekst">
+Vrijwel al het timmerwerk realiseer ik zelf, waar nodig in samenwerking met geselecteerde specialisten.
+</p>
+
+</div>
+<img src="/images/timmerwerk3.jpg" alt="Timmerproject JWE Montage">
+</div>
+
+</div>
 </section>
 
-<footer>
-    <p>© 2026 JWE Montage. Alle rechten voorbehouden.</p>
+<!-- CTA -->
+<section class="cta">
+<div class="cta-overlay"></div>
+<div class="cta-content">
+<h2>EEN OPDRACHT VOOR JWE MONTAGE? NEEM CONTACT MET MIJ OP</h2>
+<a href="mailto:info@jwemontage.nl" class="btn primary">Contact opnemen</a>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<div class="footer-container">
+
+<!-- LOGO -->
+<div class="footer-left">
+<a href="/">
+<img src="images/JWE-Montage-Logo-footer.png" alt="JWE Montage">
+</a>
+</div>
+
+<!-- PAGINA'S -->
+<div class="footer-middle">
+
+<a href="/">Home</a>
+<a href="/timmerwerk/">Timmerwerk</a>
+<a href="/verbouw/">Verbouw</a>
+<a href="/renovatie/">Renovatie</a>
+<a href="/elektrotechniek/">Elektrotechniek</a>
+<a href="/installatietechniek/">Installatietechniek</a>
+<a href="/onderhoud/">Onderhoud</a>
+<a href="/impressie/">Impressie</a>
+<a href="/contact/">Contact</a>
+
+</div>
+
+<!-- CONTACT -->
+<div class="footer-right">
+
+<a href="https://facebook.com" target="_blank" class="footer-item">
+<img src="images/icon-facebook.png" alt="Facebook">
+<span>Facebook</span>
+</a>
+
+<a href="https://instagram.com" target="_blank" class="footer-item">
+<img src="images/icon-instagram.png" alt="Instagram">
+<span>Instagram</span>
+</a>
+
+<a href="tel:0628141618" class="footer-item">
+<img src="images/icon-phone.png" alt="Telefoon">
+<span>06 - 28 14 16 18</span>
+</a>
+
+<a href="mailto:info@jwemontage.nl" class="footer-item">
+<img src="images/icon-mail.png" alt="Mail">
+<span>info@jwemontage.nl</span>
+</a>
+
+</div>
+
+</div>
+
 </footer>
 
-<script src="/script.js"></script>
 </body>
 </html>
