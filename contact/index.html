@@ -38,40 +38,25 @@ line-height:1.8;
 margin-bottom:15px;
 }
 
-.contact-info{
+.contact-buttons{
 display:flex;
 flex-direction:column;
 gap:10px;
 margin-top:15px;
 }
 
-.contact-info a{
-color:var(--primary);
-text-decoration:none;
-font-weight:600;
-}
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border-radius:6px;
-border:1px solid #ccc;
-font-size:14px;
-}
-
-.contact-form button{
+.contact-buttons a{
+display:inline-block;
 padding:12px 20px;
 background-color:var(--primary);
 color:white;
-border:none;
 border-radius:6px;
-cursor:pointer;
+text-decoration:none;
 font-weight:600;
+text-align:center;
 }
 
-.contact-form button:hover{
+.contact-buttons a:hover{
 background-color:darkblue;
 }
 
@@ -153,35 +138,16 @@ border: none;
 <div class="contact-text">
 <h2>Neem contact op met JWE Montage</h2>
 <p>
-Heb je een vraag over onze diensten of wil je een offerte aanvragen? Vul het formulier in of gebruik onderstaande contactgegevens. We reageren zo snel mogelijk.
+Heb je vragen over onze diensten of wil je een offerte aanvragen? Je kunt ons telefonisch bereiken of een e-mail sturen. Wij staan klaar om je snel en vakkundig verder te helpen.
 </p>
 
-<div class="contact-info">
-<a href="tel:0628141618">Telefoon: 06 - 28 14 16 18</a>
-<a href="mailto:info@jwemontage.nl">E-mail: info@jwemontage.nl</a>
-<a href="https://www.facebook.com/jwemontage/" target="_blank">Facebook</a>
+<div class="contact-buttons">
+<a href="tel:0628141618">Bel 06 - 28 14 16 18</a>
+<a href="mailto:info@jwemontage.nl">Stuur een e-mail</a>
 </div>
 </div>
 
 <img src="/images/contact.jpg" alt="Contact JWE Montage">
-</div>
-
-<!-- BLOK 2 -->
-<div class="contact-block reverse">
-<div class="contact-text">
-<h2>Contactformulier</h2>
-<p>
-Vul hieronder je gegevens en bericht in. We nemen zo snel mogelijk contact met je op.
-</p>
-<form class="contact-form" action="/send-form" method="post">
-<input type="text" name="name" placeholder="Naam" required>
-<input type="email" name="email" placeholder="E-mail" required>
-<input type="tel" name="phone" placeholder="Telefoonnummer">
-<textarea name="message" placeholder="Bericht" rows="5" required></textarea>
-<button type="submit">Verstuur</button>
-</form>
-</div>
-<img src="/images/contactform.jpg" alt="Contactformulier JWE Montage">
 </div>
 
 </div>
