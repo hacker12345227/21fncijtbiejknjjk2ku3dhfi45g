@@ -311,7 +311,7 @@ body {
 
 /* ================= FOOTER ================= */
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 
 .footer{
 background:#0f0f0f;
@@ -325,26 +325,30 @@ max-width:90%;
 margin:auto;
 
 display:flex;
-align-items:flex-start;
 justify-content:space-between;
+align-items:flex-start;
 }
 
-/* LOGO LINKS */
+/* LINKS LOGO */
+
+.footer-left{
+width:33%;
+}
 
 .footer-left img{
-height:70px;
+height:80px;
 }
 
-/* PAGINA LINKS MIDDEN */
+/* MIDDEN PAGINA LINKS */
 
 .footer-middle{
+width:33%;
+
 display:flex;
 flex-direction:column;
 align-items:center;
 text-align:center;
 gap:10px;
-
-flex:1;
 }
 
 .footer-middle a{
@@ -357,11 +361,14 @@ font-size:14px;
 color:#1aa3d8;
 }
 
-/* CONTACT RECHTS */
+/* RECHTS CONTACT */
 
 .footer-right{
+width:33%;
+
 display:flex;
 flex-direction:column;
+align-items:flex-end;
 gap:12px;
 }
 
