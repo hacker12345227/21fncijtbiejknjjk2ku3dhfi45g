@@ -225,10 +225,11 @@ body {
     color: #eee;
 }
 
+/* DIENSTEN ICONS RESPONSIVE */
 .diensten-icons {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
@@ -239,20 +240,34 @@ body {
     font-size: 13px;
     font-weight: 600;
     text-align: center;
-    width: 100px;
+    width: 30%;
+    max-width: 120px;
+    min-width: 80px;
+    flex: 1 1 auto;
 }
 
 .dienst img {
-    width: 50px;
-    margin-bottom: 8px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
     transition: 0.3s;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
+.dienst span {
+    display: block;
+    margin-top: 5px;
+}
+
 .dienst:hover img {
     transform: scale(1.1);
+}
+
+/* CTA BUTTON */
+.diensten-btn {
+    margin-top: 20px;
 }
 
 /* ================= OVER MIJ ================= */
@@ -313,13 +328,13 @@ body {
 }
 
 /* ================= FOOTER ================= */
-.footer{
+.footer {
     background:#0f0f0f;
     padding:40px 15px;
     color:#ccc;
 }
 
-.footer-container{
+.footer-container {
     display:flex;
     flex-direction:column;
     gap: 20px;
@@ -327,33 +342,33 @@ body {
     align-items:center;
 }
 
-.footer-left img{
+.footer-left img {
     height:100px;
 }
 
-.footer-middle{
+.footer-middle {
     display:flex;
     flex-direction:column;
     gap:10px;
 }
 
-.footer-middle a{
+.footer-middle a {
     color:#ccc;
     text-decoration:none;
     font-size:14px;
 }
 
-.footer-middle a:hover{
+.footer-middle a:hover {
     color:var(--primary);
 }
 
-.footer-right{
+.footer-right {
     display:flex;
     flex-direction:column;
     gap:10px;
 }
 
-.footer-item{
+.footer-item {
     display:flex;
     align-items:center;
     justify-content:center;
@@ -362,21 +377,58 @@ body {
     color:#ccc;
 }
 
-.footer-item img{
+.footer-item img {
     width:18px;
     height:18px;
 }
 
-.footer-item:hover{
+.footer-item:hover {
     color:var(--primary);
 }
 
 /* ================= TIMMERWERK PAGINA ================= */
+.timmerwerk-page {
+    padding: 60px 15px;
+    text-align: center;
+    color: #eee;
+}
+
 .timmerwerk-block {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-bottom: 50px;
+}
+
+.timmerwerk-block img {
+    width: 100%;
+    border-radius: 6px;
+}
+
+.timmerwerk-text h2 {
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+
+.timmerwerk-text p,
+.timmerwerk-text li {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #eee;
+}
+
+.timmerwerk-text ul {
+    margin-top: 15px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.reverse {
+    direction: rtl;
+}
+
+.reverse .timmerwerk-text {
+    direction: ltr;
 }
 
 /* ================= MEDIA QUERIES ================= */
@@ -387,4 +439,12 @@ body {
     .over-grid { flex-direction: row; gap: 50px; align-items: center; text-align: left; }
     .timmerwerk-block { flex-direction: row; gap: 60px; }
     .footer-container { flex-direction: row; justify-content: space-between; text-align: left; align-items:flex-start; }
+}
+
+@media (max-width: 600px) {
+    .dienst { width: 45%; max-width: none; }
+}
+
+@media (max-width: 400px) {
+    .dienst { width: 80%; margin-bottom: 20px; }
 }
