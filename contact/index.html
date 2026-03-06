@@ -14,17 +14,10 @@
 padding:90px 0;
 }
 
-.contact-block{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-margin-bottom:80px;
-}
-
-.contact-block img{
-width:100%;
-border-radius:6px;
+.contact-text{
+max-width:800px;
+margin:0 auto;
+text-align:center;
 }
 
 .contact-text h2{
@@ -42,7 +35,8 @@ margin-bottom:15px;
 display:flex;
 flex-direction:column;
 gap:10px;
-margin-top:15px;
+margin-top:25px;
+align-items:center;
 }
 
 .contact-buttons a{
@@ -58,32 +52,6 @@ text-align:center;
 
 .contact-buttons a:hover{
 background-color:darkblue;
-}
-
-/* mobiel responsive */
-@media (max-width:800px){
-.contact-block{
-grid-template-columns:1fr;
-}
-}
-
-/* Facebook icon */
-.fb-box {
-display: block;
-width: 48px;
-height: 48px;
-text-decoration: none;
-border: none;
-padding: 0;
-margin: 0;
-}
-
-.fb-box img {
-width: 100%;
-height: 100%;
-object-fit: contain;
-display: block;
-border: none;
 }
 </style>
 </head>
@@ -133,21 +101,16 @@ border: none;
 <section class="contact-page">
 <div class="container">
 
-<!-- BLOK 1 -->
-<div class="contact-block">
 <div class="contact-text">
 <h2>Neem contact op met JWE Montage</h2>
 <p>
-Heb je vragen over onze diensten of wil je een offerte aanvragen? Je kunt ons telefonisch bereiken of een e-mail sturen. Wij staan klaar om je snel en vakkundig verder te helpen.
+Heb je vragen over onze diensten of wil je een offerte aanvragen? Je kunt ons eenvoudig bereiken via telefoon of e-mail. Wij staan klaar om je snel en vakkundig verder te helpen.
 </p>
 
 <div class="contact-buttons">
 <a href="tel:0628141618">Bel 06 - 28 14 16 18</a>
 <a href="mailto:info@jwemontage.nl">Stuur een e-mail</a>
 </div>
-</div>
-
-<img src="/images/contact.jpg" alt="Contact JWE Montage">
 </div>
 
 </div>
@@ -215,7 +178,6 @@ Heb je vragen over onze diensten of wil je een offerte aanvragen? Je kunt ons te
 </div>
 
 </div>
-
 </footer>
 
 </body>
