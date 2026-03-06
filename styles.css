@@ -311,9 +311,12 @@ body {
 
 /* ================= FOOTER ================= */
 
+/* FOOTER */
+
 .footer{
 background-color:#111;
-padding:60px 0;
+padding:70px 0;
+color:white;
 }
 
 .footer-container{
@@ -321,18 +324,40 @@ width:90%;
 max-width:1200px;
 margin:auto;
 display:flex;
-align-items:flex-start;
 justify-content:space-between;
+align-items:flex-start;
 }
+
+/* LOGO */
 
 .footer-left img{
 width:220px;
 }
 
+/* MIDDEN PAGINA'S */
+
+.footer-middle{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+.footer-middle a{
+color:white;
+text-decoration:none;
+font-size:16px;
+}
+
+.footer-middle a:hover{
+color:#3aa7c9;
+}
+
+/* RECHTS CONTACT */
+
 .footer-right{
 display:flex;
 flex-direction:column;
-gap:18px;
+gap:16px;
 }
 
 .footer-item{
@@ -340,7 +365,7 @@ display:flex;
 align-items:center;
 text-decoration:none;
 color:white;
-font-size:18px;
+font-size:17px;
 }
 
 .footer-item img{
