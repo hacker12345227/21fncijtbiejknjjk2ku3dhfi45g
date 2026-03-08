@@ -201,33 +201,32 @@ body {
 }
 
 /* ================= DIENSTEN ================= */
-/* ================= DIENSTEN ================= */
-.diensten {
+#diensten {
     background: var(--light);
     padding: 60px 15px;
     text-align: center;
 }
 
-.diensten-container {
-    max-width: 800px;
+#diensten .diensten-container {
+    max-width: 900px;
     margin: auto;
 }
 
-.diensten h2 {
+#diensten h2 {
     color: var(--primary);
-    font-size: 28px;
+    font-size: 32px;
     text-transform: uppercase;
     margin-bottom: 15px;
 }
 
-.diensten-intro {
+#diensten .diensten-intro {
     margin-bottom: 30px;
     font-size: 16px;
     color: #eee;
 }
 
-/* DIENSTEN ICONS */
-.diensten-icons {
+/* Diensten icoontjes */
+#diensten .diensten-icons {
     display: flex;
     justify-content: center;
     gap: 30px;
@@ -235,7 +234,7 @@ body {
     margin-bottom: 30px;
 }
 
-.dienst {
+#diensten .dienst {
     text-decoration: none;
     color: #eee;
     font-size: 14px;
@@ -245,7 +244,7 @@ body {
     flex: 1 1 auto;
 }
 
-.dienst img {
+#diensten .dienst img {
     width: 80px;
     height: 80px;
     margin-bottom: 10px;
@@ -255,67 +254,19 @@ body {
     margin-right: auto;
 }
 
-.dienst span {
+#diensten .dienst span {
     display: block;
     margin-top: 5px;
 }
 
-.dienst:hover img {
+#diensten .dienst:hover img {
     transform: scale(1.1);
 }
 
-/* BUTTON ONDER DIENSTEN */
-.diensten-btn {
+/* Knop onder de diensten */
+#diensten .diensten-btn {
     margin-top: 20px;
     text-align: center;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 992px) {
-    .diensten h2 {
-        font-size: 24px;
-    }
-    .diensten-intro {
-        font-size: 15px;
-    }
-    .dienst img {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-@media (max-width: 600px) {
-    .diensten h2 {
-        font-size: 20px;
-    }
-    .diensten-intro {
-        font-size: 14px;
-    }
-    .dienst {
-        width: 45%;
-        margin-bottom: 15px;
-    }
-    .dienst img {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-@media (max-width: 400px) {
-    .diensten h2 {
-        font-size: 18px;
-    }
-    .diensten-intro {
-        font-size: 13px;
-    }
-    .dienst {
-        width: 80%;
-        margin: 0 auto 20px;
-    }
-    .dienst img {
-        width: 50px;
-        height: 50px;
-    }
 }
 
 /* ================= OVER MIJ ================= */
@@ -511,13 +462,13 @@ body {
     direction: ltr;
 }
 
-/* ================= RESPONSIVE MEDIA QUERIES ================= */
+/* ================= MEDIA QUERIES ================= */
 
 /* Desktop > 800px */
 @media (min-width: 800px) {
     .hero h1 { font-size: 46px; }
     .hero-buttons { flex-direction: row; gap: 15px; }
-    .diensten-icons { gap: 60px; }
+    #diensten .diensten-icons { gap: 60px; }
     .over-grid { flex-direction: row; text-align: left; }
     .timmerwerk-block { flex-direction: row; gap: 60px; }
 }
@@ -535,12 +486,16 @@ body {
 
 /* Mobiel: diensten icoontjes aanpassen */
 @media (max-width: 600px) {
-    .dienst { width: 45%; max-width: none; }
+    #diensten .dienst { width: 45%; margin-bottom: 15px; }
+    #diensten .dienst img { width: 60px; height: 60px; }
 }
 
 /* Extra klein mobiel */
 @media (max-width: 400px) {
-    .dienst { width: 80%; margin-bottom: 20px; }
+    #diensten .dienst { width: 80%; margin: 0 auto 20px; }
+    #diensten .dienst img { width: 50px; height: 50px; }
+    #diensten h2 { font-size: 18px; }
+    #diensten .diensten-intro { font-size: 13px; }
     .hero h1 { font-size: 28px; }
     .hero-sub { font-size: 12px; }
     .btn { font-size: 11px; padding: 8px 15px; }
