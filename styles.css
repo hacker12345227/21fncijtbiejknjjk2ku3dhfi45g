@@ -201,6 +201,7 @@ body {
 }
 
 /* ================= DIENSTEN ================= */
+/* ================= DIENSTEN ================= */
 #diensten {
     background: var(--light);
     padding: 60px 15px;
@@ -220,12 +221,11 @@ body {
     line-height: 1.2;
 }
 
-/* Introductietekst */
 #diensten .diensten-intro {
     margin-bottom: 30px;
     font-size: 16px;
     color: #eee;
-    max-width: 700px; /* beperk de breedte van tekst */
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
     line-height: 1.5;
@@ -235,7 +235,7 @@ body {
 #diensten .diensten-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
@@ -247,10 +247,9 @@ body {
     font-size: 14px;
     font-weight: 600;
     text-align: center;
-    flex: 0 1 auto;   /* voorkomt dat de items uitrekken */
-    width: auto;       /* gebruik natuurlijke breedte van icoon */
-    max-width: 120px;  /* limiet zodat ze niet te groot worden */
-    margin: 0 auto;    /* centreren in flex-item */
+    flex: 0 0 auto;   /* voorkom uitrekken */
+    width: 120px;      /* vaste breedte voor desktop */
+    margin: 0 auto;
 }
 
 /* Icon afbeelding */
@@ -278,23 +277,33 @@ body {
 }
 
 /* ================= RESPONSIVE ================= */
+
+/* Tablet & kleinere desktops */
 @media (max-width: 992px) {
     #diensten h2 { font-size: 28px; }
     #diensten .diensten-intro { font-size: 15px; }
     #diensten .dienst img { width: 70px; height: 70px; }
 }
 
+/* Mobiel: max 2 icoontjes naast elkaar */
 @media (max-width: 600px) {
     #diensten h2 { font-size: 22px; }
     #diensten .diensten-intro { font-size: 14px; }
-    #diensten .dienst { width: 45%; margin-bottom: 15px; }
+    #diensten .dienst {
+        flex: 0 0 45%; /* maximaal 2 naast elkaar */
+        margin-bottom: 15px;
+    }
     #diensten .dienst img { width: 60px; height: 60px; }
 }
 
+/* Extra klein mobiel */
 @media (max-width: 400px) {
     #diensten h2 { font-size: 18px; }
     #diensten .diensten-intro { font-size: 13px; }
-    #diensten .dienst { width: 80%; margin: 0 auto 20px; }
+    #diensten .dienst {
+        flex: 0 0 80%; /* 1 icoon per rij */
+        margin: 0 auto 20px;
+    }
     #diensten .dienst img { width: 50px; height: 50px; }
 }
 
