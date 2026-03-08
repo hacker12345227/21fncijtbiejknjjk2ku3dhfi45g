@@ -201,6 +201,7 @@ body {
 }
 
 /* ================= DIENSTEN ================= */
+/* ================= DIENSTEN ================= */
 .diensten {
     background: var(--light);
     padding: 60px 15px;
@@ -214,21 +215,22 @@ body {
 
 .diensten h2 {
     color: var(--primary);
-    font-size: 18px;
+    font-size: 28px;
     text-transform: uppercase;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .diensten-intro {
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: 16px;
     color: #eee;
 }
 
+/* DIENSTEN ICONS */
 .diensten-icons {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
@@ -236,20 +238,18 @@ body {
 .dienst {
     text-decoration: none;
     color: #eee;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 600;
     text-align: center;
-    width: 30%;
-    max-width: 120px;
-    min-width: 80px;
+    width: 120px;
     flex: 1 1 auto;
 }
 
 .dienst img {
-    max-width: 100%;
-    height: auto;
+    width: 80px;
+    height: 80px;
     margin-bottom: 10px;
-    transition: 0.3s;
+    transition: transform 0.3s ease;
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -264,8 +264,58 @@ body {
     transform: scale(1.1);
 }
 
+/* BUTTON ONDER DIENSTEN */
 .diensten-btn {
     margin-top: 20px;
+    text-align: center;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 992px) {
+    .diensten h2 {
+        font-size: 24px;
+    }
+    .diensten-intro {
+        font-size: 15px;
+    }
+    .dienst img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .diensten h2 {
+        font-size: 20px;
+    }
+    .diensten-intro {
+        font-size: 14px;
+    }
+    .dienst {
+        width: 45%;
+        margin-bottom: 15px;
+    }
+    .dienst img {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media (max-width: 400px) {
+    .diensten h2 {
+        font-size: 18px;
+    }
+    .diensten-intro {
+        font-size: 13px;
+    }
+    .dienst {
+        width: 80%;
+        margin: 0 auto 20px;
+    }
+    .dienst img {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 /* ================= OVER MIJ ================= */
