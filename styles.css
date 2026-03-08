@@ -233,9 +233,9 @@ body {
 /* Diensten icoontjes container */
 #diensten .diensten-icons {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-    flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
@@ -246,15 +246,14 @@ body {
     font-size: 14px;
     font-weight: 600;
     text-align: center;
-    flex: 0 1 auto;    /* Laat items hun natuurlijke breedte behouden */
-    width: auto;        /* width wordt bepaald door de afbeelding */
-    max-width: 120px;   /* limiet voor desktop */
+    flex: 0 0 auto;      /* voorkom uitrekken */
+    width: 120px;         /* desktop breedte */
     margin: 0 auto;
 }
 
 /* Icon afbeelding */
 #diensten .dienst img {
-    width: 80px;       /* desktop grootte */
+    width: 80px;          /* desktop grootte */
     height: 80px;
     display: block;
     margin: 0 auto 10px;
@@ -285,13 +284,13 @@ body {
     #diensten .dienst img { width: 70px; height: 70px; }
 }
 
-/* Mobiel: max 2 icoontjes per rij */
+/* Mobiel: max 2 iconen per rij */
 @media (max-width: 600px) {
     #diensten h2 { font-size: 22px; }
     #diensten .diensten-intro { font-size: 14px; }
     #diensten .dienst {
-        flex: 0 0 45%;   /* maximaal 2 per rij */
-        margin: 0 auto 15px;
+        flex: 0 0 45%;   /* maximaal 2 naast elkaar */
+        margin: 10px;    /* kleine tussenruimte */
     }
     #diensten .dienst img { width: 60px; height: 60px; }
 }
@@ -302,7 +301,7 @@ body {
     #diensten .diensten-intro { font-size: 13px; }
     #diensten .dienst {
         flex: 0 0 80%;   /* 1 icoon per rij */
-        margin: 0 auto 20px;
+        margin: 10px auto;
     }
     #diensten .dienst img { width: 50px; height: 50px; }
 }
