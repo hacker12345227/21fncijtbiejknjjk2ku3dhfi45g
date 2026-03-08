@@ -209,7 +209,7 @@ body {
 
 #diensten .diensten-container {
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 #diensten h2 {
@@ -225,39 +225,41 @@ body {
     margin-bottom: 30px;
     font-size: 16px;
     color: #eee;
-    max-width: 700px; /* tekst niet te breed */
+    max-width: 700px; /* beperk de breedte van tekst */
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.5; /* betere leesbaarheid */
+    line-height: 1.5;
 }
 
-/* Diensten icoontjes */
+/* Diensten icoontjes container */
 #diensten .diensten-icons {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
+/* Individuele dienst */
 #diensten .dienst {
     text-decoration: none;
     color: #eee;
     font-size: 14px;
     font-weight: 600;
     text-align: center;
-    width: 120px;
-    flex: 1 1 auto;
+    flex: 0 1 auto;   /* voorkomt dat de items uitrekken */
+    width: auto;       /* gebruik natuurlijke breedte van icoon */
+    max-width: 120px;  /* limiet zodat ze niet te groot worden */
+    margin: 0 auto;    /* centreren in flex-item */
 }
 
+/* Icon afbeelding */
 #diensten .dienst img {
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto 10px;
+    transition: transform 0.3s ease;
 }
 
 #diensten .dienst span {
