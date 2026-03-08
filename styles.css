@@ -124,6 +124,11 @@ body {
     color: var(--primary);
 }
 
+.main-nav a.active {
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 4px;
+}
+
 /* ================= HERO ================= */
 .hero {
     height: 400px;
